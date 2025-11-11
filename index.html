@@ -6,11 +6,14 @@
     <title>Meras - Professional Master's Registration Webinar</title>
     <meta name="description" id="meta-description" content="انضم إلى ويبينار مجاني من مراس لتتعلم كيف تبدأ رحلتك نحو الماجستير المهني بدعم حكومي كامل، مع مدخل عملي لمجال الحوكمة وإدارة المخاطر. احجز مقعدك الآن!">
     
-    <!-- Preconnect to Google Fonts for faster loading -->
+    <!-- Preconnect to Google Fonts for faster connection -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Asynchronously load the font stylesheet to prevent render-blocking -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"></noscript>
+
     <style>
         * {
             margin: 0;
@@ -905,7 +908,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <header class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
@@ -920,136 +923,140 @@
                 <div class="hero-mockup">
                     <div class="mockup-card">
                         <div class="mockup-logo">🎓</div>
-                        <div class="mockup-title" id="mockup-title">ويبينار مهني احترافي</div>
+                        <h2 class="mockup-title" id="mockup-title">ويبينار مهني احترافي</h2>
                         <div class="mockup-info" id="mockup-info">تعلّم كيف تبدأ رحلتك المهنية نحو الماجستير مع دعم حكومي كامل</div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </header>
 
-    <!-- About Meras Section -->
-    <section class="about-section">
-        <div class="container">
-            <h2 class="section-title scroll-reveal" id="about-title">عن مراس</h2>
-            <div class="about-content scroll-reveal">
-                <p id="about-text">مراس جهة تدريب مهني معتمدة رسميًا في السعودية، تقدّم برامج ماجستير مهني وشهادات احترافية معترف بها دوليًا. من خلال شراكات مع جامعات وهيئات اعتماد عالمية، نساعد المهنيين على تطوير مهاراتهم ومساراتهم الوظيفية حتى بأسعار تنافسية.</p>
-                <div class="credentials">
-                    <div class="credential-badge scroll-reveal" id="cred1">معتمد رسميًا</div>
-                    <div class="credential-badge scroll-reveal" id="cred2">شهادات دولية</div>
-                    <div class="credential-badge scroll-reveal" id="cred3">جامعات عالمية</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- What You'll Learn Section -->
-    <section class="learn-section">
-        <div class="container">
-            <h2 class="section-title scroll-reveal" id="learn-title">ماذا ستتعلّم؟</h2>
-            <div class="learn-grid">
-                <div class="learn-card scroll-reveal">
-                    <h3 id="learn1-title">🎯 بداية رحلتك نحو الماجستير</h3>
-                    <p id="learn1-text">كيف تبدأ طريق الشهادة الاحترافية للماجستير المهني خطوة بخطوة</p>
-                </div>
-                <div class="learn-card scroll-reveal">
-                    <h3 id="learn2-title">💰 التمويل الحكومي الكامل</h3>
-                    <p id="learn2-text">طريقة الاستفادة من دعم صندوق هدف لاسترداد الرسوم المالية بالكامل</p>
-                </div>
-                <div class="learn-card scroll-reveal">
-                    <h3 id="learn3-title">✅ التحقق من الأهلية</h3>
-                    <p id="learn3-text">كيف تتحقق إذا شهادتك مؤهلة وتمشي خطوة بخطوة بالمنصة</p>
-                </div>
-                <div class="learn-card scroll-reveal">
-                    <h3 id="learn4-title">📊 الحوكمة وإدارة المخاطر</h3>
-                    <p id="learn4-text">مدخل عملي لمجال الحوكمة وإدارة المخاطر—أكثر المجالات طلبًا في السعودية</p>
-                </div>
-                <div class="learn-card scroll-reveal">
-                    <h3 id="learn5-title">🎓 الفرق بين البرامج</h3>
-                    <p id="learn5-text">الفرق بين الماجستير الأكاديمي والمهني وأيه يليق بك من المهنيين</p>
-                </div>
-                <div class="learn-card scroll-reveal">
-                    <h3 id="learn6-title">📜 شهادة حضور مجانية</h3>
-                    <p id="learn6-text">شهادة حضور إلكترونية لكل المسجلين</p>
-                </div>
-            </div>
-            <div style="text-align: center; margin-top: 60px;">
-                <a href="#register" class="cta-button scroll-reveal" id="learn-cta">سجّل الآن وخذ أول خطوة لرفع فرصك الوظيفية</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Speaker Section -->
-    <section class="speaker-section">
-        <div class="container">
-            <h2 class="section-title scroll-reveal" id="speaker-title">عن المحاضر</h2>
-            <div class="speaker-card scroll-reveal">
-                <div class="speaker-image">
-			        <img src="/assets/images/avatar.webp" style="object-fit: cover; width: 100%; height: 100%; border-radius:100%;" width="170" height="170" alt="أ. عبير العجمي, المحاضر" id="speaker-image-tag">
-		        </div>
-                <div class="speaker-name" id="speaker-name">أ. عبير العجمي</div>
-                <p class="speaker-bio" id="speaker-bio">مستشار معتمد في تطوير الأعمال وإدارة الحوكمة، بخبرة تتجاوز 15 سنة في تصميم أنظمة التطوير المؤسسي داخل الأسواق السعودي والعربي.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Registration Form -->
-    <section class="registration-section" id="register">
-        <div class="container">
-            <h2 class="section-title" id="form-title">نموذج التسجيل</h2>
-            <div class="form-container">
-                <form id="registration-form">
-                    <div class="form-group">
-                        <label for="fullname" id="label-name">الاسم الكامل</label>
-                        <input type="text" id="fullname" required>
+    <!-- Main content of the page -->
+    <main>
+        <!-- About Meras Section -->
+        <section class="about-section">
+            <div class="container">
+                <h2 class="section-title scroll-reveal" id="about-title">عن مراس</h2>
+                <div class="about-content scroll-reveal">
+                    <p id="about-text">مراس جهة تدريب مهني معتمدة رسميًا في السعودية، تقدّم برامج ماجستير مهني وشهادات احترافية معترف بها دوليًا. من خلال شراكات مع جامعات وهيئات اعتماد عالمية، نساعد المهنيين على تطوير مهاراتهم ومساراتهم الوظيفية حتى بأسعار تنافسية.</p>
+                    <div class="credentials">
+                        <div class="credential-badge scroll-reveal" id="cred1">معتمد رسميًا</div>
+                        <div class="credential-badge scroll-reveal" id="cred2">شهادات دولية</div>
+                        <div class="credential-badge scroll-reveal" id="cred3">جامعات عالمية</div>
                     </div>
-                    <div class="form-group">
-                        <label for="email" id="label-email">البريد الإلكتروني</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone" id="label-phone">رقم الجوال</label>
-                        <input type="tel" id="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="job" id="label-job">الوظيفة الحالية</label>
-                        <input type="text" id="job" required>
-                    </div>
-                    <button type="submit" class="submit-button" id="submit-btn">احجز مقعدك الآن</button>
-                </form>
-                <div class="success-message" id="success-message">
-                    <div class="success-icon">✓</div>
-                    <h3 id="success-title">شكرًا لك!</h3>
-                    <p id="success-text">تفاصيل التسجيل ورابط الدخول وصلك على الإيميل المسجّل.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2 class="section-title scroll-reveal" id="faq-title">الأسئلة الشائعة</h2>
-            <div class="faq-container">
-                <div class="faq-item scroll-reveal">
-                    <h3 class="faq-question" id="faq1-q">هل الويبينار مجاني؟</h3>
-                    <div class="faq-answer" id="faq1-a">نعم، التسجيل مطلوب فقط.</div>
+        <!-- What You'll Learn Section -->
+        <section class="learn-section">
+            <div class="container">
+                <h2 class="section-title scroll-reveal" id="learn-title">ماذا ستتعلّم؟</h2>
+                <div class="learn-grid">
+                    <div class="learn-card scroll-reveal">
+                        <h3 id="learn1-title">🎯 بداية رحلتك نحو الماجستير</h3>
+                        <p id="learn1-text">كيف تبدأ طريق الشهادة الاحترافية للماجستير المهني خطوة بخطوة</p>
+                    </div>
+                    <div class="learn-card scroll-reveal">
+                        <h3 id="learn2-title">💰 التمويل الحكومي الكامل</h3>
+                        <p id="learn2-text">طريقة الاستفادة من دعم صندوق هدف لاسترداد الرسوم المالية بالكامل</p>
+                    </div>
+                    <div class="learn-card scroll-reveal">
+                        <h3 id="learn3-title">✅ التحقق من الأهلية</h3>
+                        <p id="learn3-text">كيف تتحقق إذا شهادتك مؤهلة وتمشي خطوة بخطوة بالمنصة</p>
+                    </div>
+                    <div class="learn-card scroll-reveal">
+                        <h3 id="learn4-title">📊 الحوكمة وإدارة المخاطر</h3>
+                        <p id="learn4-text">مدخل عملي لمجال الحوكمة وإدارة المخاطر—أكثر المجالات طلبًا في السعودية</p>
+                    </div>
+                    <div class="learn-card scroll-reveal">
+                        <h3 id="learn5-title">🎓 الفرق بين البرامج</h3>
+                        <p id="learn5-text">الفرق بين الماجستير الأكاديمي والمهني وأيه يليق بك من المهنيين</p>
+                    </div>
+                    <div class="learn-card scroll-reveal">
+                        <h3 id="learn6-title">📜 شهادة حضور مجانية</h3>
+                        <p id="learn6-text">شهادة حضور إلكترونية لكل المسجلين</p>
+                    </div>
                 </div>
-                <div class="faq-item scroll-reveal">
-                    <h3 class="faq-question" id="faq2-q">كيف أحضر؟</h3>
-                    <div class="faq-answer" id="faq2-a">يوصلك رابط على الإيميل بعد التسجيل.</div>
-                </div>
-                <div class="faq-item scroll-reveal">
-                    <h3 class="faq-question" id="faq3-q">هل في شهادة حضور؟</h3>
-                    <div class="faq-answer" id="faq3-a">نعم—شهادة إلكترونية من مراس.</div>
-                </div>
-                <div class="faq-item scroll-reveal">
-                    <h3 class="faq-question" id="faq4-q">هل أحتاج خبرة؟</h3>
-                    <div class="faq-answer" id="faq4-a">لا، الويبينار مناسب للكل من يبغى يبدأ ويطور نفسه مهنيًا.</div>
+                <div style="text-align: center; margin-top: 60px;">
+                    <a href="#register" class="cta-button scroll-reveal" id="learn-cta">سجّل الآن وخذ أول خطوة لرفع فرصك الوظيفية</a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Speaker Section -->
+        <section class="speaker-section">
+            <div class="container">
+                <h2 class="section-title scroll-reveal" id="speaker-title">عن المحاضر</h2>
+                <div class="speaker-card scroll-reveal">
+                    <div class="speaker-image">
+                        <!-- RECOMMENDATION: Resize this image to 340x340px to save ~24KiB -->
+                        <img src="/assets/images/avatar.webp" style="object-fit: cover; width: 100%; height: 100%; border-radius:100%;" width="170" height="170" alt="أ. عبير العجمي, المحاضر" id="speaker-image-tag">
+                    </div>
+                    <div class="speaker-name" id="speaker-name">أ. عبير العجمي</div>
+                    <p class="speaker-bio" id="speaker-bio">مستشار معتمد في تطوير الأعمال وإدارة الحوكمة، بخبرة تتجاوز 15 سنة في تصميم أنظمة التطوير المؤسسي داخل الأسواق السعودي والعربي.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Form -->
+        <section class="registration-section" id="register">
+            <div class="container">
+                <h2 class="section-title" id="form-title">نموذج التسجيل</h2>
+                <div class="form-container">
+                    <form id="registration-form">
+                        <div class="form-group">
+                            <label for="fullname" id="label-name">الاسم الكامل</label>
+                            <input type="text" id="fullname" name="fullname" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" id="label-email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" id="label-phone">رقم الجوال</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="job" id="label-job">الوظيفة الحالية</label>
+                            <input type="text" id="job" name="job" required>
+                        </div>
+                        <button type="submit" class="submit-button" id="submit-btn">احجز مقعدك الآن</button>
+                    </form>
+                    <div class="success-message" id="success-message">
+                        <div class="success-icon">✓</div>
+                        <h3 id="success-title">شكرًا لك!</h3>
+                        <p id="success-text">تفاصيل التسجيل ورابط الدخول وصلك على الإيميل المسجّل.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section">
+            <div class="container">
+                <h2 class="section-title scroll-reveal" id="faq-title">الأسئلة الشائعة</h2>
+                <div class="faq-container">
+                    <div class="faq-item scroll-reveal">
+                        <h3 class="faq-question" id="faq1-q">هل الويبينار مجاني؟</h3>
+                        <div class="faq-answer" id="faq1-a">نعم، التسجيل مطلوب فقط.</div>
+                    </div>
+                    <div class="faq-item scroll-reveal">
+                        <h3 class="faq-question" id="faq2-q">كيف أحضر؟</h3>
+                        <div class="faq-answer" id="faq2-a">يوصلك رابط على الإيميل بعد التسجيل.</div>
+                    </div>
+                    <div class="faq-item scroll-reveal">
+                        <h3 class="faq-question" id="faq3-q">هل في شهادة حضور؟</h3>
+                        <div class="faq-answer" id="faq3-a">نعم—شهادة إلكترونية من مراس.</div>
+                    </div>
+                    <div class="faq-item scroll-reveal">
+                        <h3 class="faq-question" id="faq4-q">هل أحتاج خبرة؟</h3>
+                        <div class="faq-answer" id="faq4-a">لا، الويبينار مناسب للكل من يبغى يبدأ ويطور نفسه مهنيًا.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
