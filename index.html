@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meras - Professional Master's Registration Webinar</title>
+    <meta name="description" id="meta-description" content="انضم إلى ويبينار مجاني من مراس لتتعلم كيف تبدأ رحلتك نحو الماجستير المهني بدعم حكومي كامل، مع مدخل عملي لمجال الحوكمة وإدارة المخاطر. احجز مقعدك الآن!">
+    
+    <!-- Preconnect to Google Fonts for faster loading -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         * {
@@ -979,8 +985,8 @@
             <h2 class="section-title scroll-reveal" id="speaker-title">عن المحاضر</h2>
             <div class="speaker-card scroll-reveal">
                 <div class="speaker-image">
-			<img src="/assets/images/avatar.webp" style="object-fit: cover; width: 100%; height: 100%; border-radius:100%;" />
-		</div>
+			        <img src="/assets/images/avatar.webp" style="object-fit: cover; width: 100%; height: 100%; border-radius:100%;" width="170" height="170" alt="أ. عبير العجمي, المحاضر" id="speaker-image-tag">
+		        </div>
                 <div class="speaker-name" id="speaker-name">أ. عبير العجمي</div>
                 <p class="speaker-bio" id="speaker-bio">مستشار معتمد في تطوير الأعمال وإدارة الحوكمة، بخبرة تتجاوز 15 سنة في تصميم أنظمة التطوير المؤسسي داخل الأسواق السعودي والعربي.</p>
             </div>
@@ -1026,19 +1032,19 @@
             <h2 class="section-title scroll-reveal" id="faq-title">الأسئلة الشائعة</h2>
             <div class="faq-container">
                 <div class="faq-item scroll-reveal">
-                    <div class="faq-question" id="faq1-q">هل الويبينار مجاني؟</div>
+                    <h3 class="faq-question" id="faq1-q">هل الويبينار مجاني؟</h3>
                     <div class="faq-answer" id="faq1-a">نعم، التسجيل مطلوب فقط.</div>
                 </div>
                 <div class="faq-item scroll-reveal">
-                    <div class="faq-question" id="faq2-q">كيف أحضر؟</div>
+                    <h3 class="faq-question" id="faq2-q">كيف أحضر؟</h3>
                     <div class="faq-answer" id="faq2-a">يوصلك رابط على الإيميل بعد التسجيل.</div>
                 </div>
                 <div class="faq-item scroll-reveal">
-                    <div class="faq-question" id="faq3-q">هل في شهادة حضور؟</div>
+                    <h3 class="faq-question" id="faq3-q">هل في شهادة حضور؟</h3>
                     <div class="faq-answer" id="faq3-a">نعم—شهادة إلكترونية من مراس.</div>
                 </div>
                 <div class="faq-item scroll-reveal">
-                    <div class="faq-question" id="faq4-q">هل أحتاج خبرة؟</div>
+                    <h3 class="faq-question" id="faq4-q">هل أحتاج خبرة؟</h3>
                     <div class="faq-answer" id="faq4-a">لا، الويبينار مناسب للكل من يبغى يبدأ ويطور نفسه مهنيًا.</div>
                 </div>
             </div>
@@ -1048,7 +1054,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-cta" id="footer-cta">خطوة واحدة قادرة تغيّر مستقبلك 👇</div>
+            <h2 class="footer-cta" id="footer-cta">خطوة واحدة قادرة تغيّر مستقبلك 👇</h2>
             <a href="#register" class="footer-button" id="footer-btn">سجّل الآن وابدأ رحلتك نحو شهادة دولية مع دعم حكومي كامل</a>
             <p class="footer-text">© 2025 Meras for Training & Professional Development. All rights reserved.</p>
         </div>
@@ -1059,6 +1065,7 @@
         const translations = {
             ar: {
                 langText: "English",
+                metaDescription: "انضم إلى ويبينار مجاني من مراس لتتعلم كيف تبدأ رحلتك نحو الماجستير المهني بدعم حكومي كامل، مع مدخل عملي لمجال الحوكمة وإدارة المخاطر. احجز مقعدك الآن!",
                 heroTitle: "ابدأ رحلتك نحو شهادة الماجستير المهني مع دعم حكومي كامل—مجانًا مع مراس",
                 eventDate: "السبت، 15 نوفمبر 2025 - الساعة 8:00 مساءً (توقيت السعودية)",
                 heroDescription: "ويبينار مجاني مقدّم من خبراء معتمدين يعرّفك خطوة بخطوة كيف تختار البرنامج الأنسب لك، كيف تسترد رسومك كاملة من صندوق هدف الحكومي مع مدخل عملي عن مجال الحوكمة وإدارة المخاطر.",
@@ -1087,6 +1094,7 @@
                 speakerTitle: "عن المحاضر",
                 speakerName: "أ. عبير العجمي",
                 speakerBio: "مستشار معتمد في تطوير الأعمال وإدارة الحوكمة، بخبرة تتجاوز 15 سنة في تصميم أنظمة التطوير المؤسسي داخل الأسواق السعودي والعربي.",
+                speakerAlt: "أ. عبير العجمي, المحاضر",
                 formTitle: "نموذج التسجيل",
                 labelName: "الاسم الكامل",
                 labelEmail: "البريد الإلكتروني",
@@ -1109,6 +1117,7 @@
             },
             en: {
                 langText: "العربية",
+                metaDescription: "Join a free webinar by Meras to learn how to start your professional Master's journey with full government support, plus a practical introduction to Governance & Risk Management. Reserve your spot now!",
                 heroTitle: "Start Your Professional Master's Journey with Full Government Support—Free with Meras",
                 eventDate: "Saturday, November 15, 2025 - 8:00 PM (Saudi Arabia Time)",
                 heroDescription: "A free webinar delivered by certified experts that guides you step-by-step on how to choose the right program, how to recover your full tuition through the government's Hadaf Fund, with a practical introduction to Governance and Risk Management.",
@@ -1137,6 +1146,7 @@
                 speakerTitle: "About the Speaker",
                 speakerName: "Ms. Abeer Al-Ajmi",
                 speakerBio: "Certified consultant in business development and governance management, with over 15 years of experience in designing institutional development systems within Saudi and Arab markets.",
+                speakerAlt: "Ms. Abeer Al-Ajmi, the speaker",
                 formTitle: "Registration Form",
                 labelName: "Full Name",
                 labelEmail: "Email Address",
@@ -1182,6 +1192,7 @@
         function updateContent() {
             const t = translations[currentLang];
             
+            document.getElementById('meta-description').setAttribute('content', t.metaDescription);
             document.getElementById('lang-text').textContent = t.langText;
             document.getElementById('hero-title').textContent = t.heroTitle;
             document.getElementById('event-date-text').textContent = t.eventDate;
@@ -1211,6 +1222,7 @@
             document.getElementById('speaker-title').textContent = t.speakerTitle;
             document.getElementById('speaker-name').textContent = t.speakerName;
             document.getElementById('speaker-bio').textContent = t.speakerBio;
+            document.getElementById('speaker-image-tag').setAttribute('alt', t.speakerAlt);
             document.getElementById('form-title').textContent = t.formTitle;
             document.getElementById('label-name').textContent = t.labelName;
             document.getElementById('label-email').textContent = t.labelEmail;
@@ -1272,15 +1284,6 @@
 
         document.querySelectorAll('.scroll-reveal').forEach(el => {
             observer.observe(el);
-        });
-
-        // Parallax Effect on Hero
-        window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero');
-            if (hero && scrolled < window.innerHeight) {
-                hero.style.transform = 'translateY(' + (scrolled * 0.5) + 'px)';
-            }
         });
     </script>
 </body>
