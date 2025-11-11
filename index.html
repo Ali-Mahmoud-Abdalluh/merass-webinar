@@ -42,14 +42,13 @@
                     <div class="mockup-card">
                         <div class="mockup-logo">🎓</div>
                         <h2 class="mockup-title" id="mockup-title">ويبينار مهني احترافي</h2>
-                        <div class="mockup-info" id="mockup-info">تعلّم كيف تبدأ رحلتك المهنية نحو الماجستير مع دعم حكومي كامل</div>
+                        <div class="mockup-info" id="mockup-info">تعلّم كيف تبدأ رحلتك المهنية نحو המاجستير مع دعم حكومي كامل</div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Main content of the page -->
     <main>
         <!-- About Meras Section -->
         <section class="about-section">
@@ -108,7 +107,6 @@
                 <h2 class="section-title scroll-reveal" id="speaker-title">عن المحاضر</h2>
                 <div class="speaker-card scroll-reveal">
                     <div class="speaker-image">
-                        <!-- RECOMMENDATION: Resize this image to 340x340px to save ~24KiB -->
                         <img src="/assets/images/avatar.webp" style="object-fit: cover; width: 100%; height: 100%; border-radius:100%;" width="170" height="170" alt="أ. عبير العجمي, المحاضر" id="speaker-image-tag">
                     </div>
                     <div class="speaker-name" id="speaker-name">أ. عبير العجمي</div>
@@ -186,232 +184,147 @@
     </footer>
 
     <script>
-        // Language Translations
-        const translations = {
-            ar: {
-                langText: "English",
-                metaDescription: "انضم إلى ويبينار مجاني من مراس لتتعلم كيف تبدأ رحلتك نحو الماجستير المهني بدعم حكومي كامل، مع مدخل عملي لمجال الحوكمة وإدارة المخاطر. احجز مقعدك الآن!",
-                heroTitle: "ابدأ رحلتك نحو شهادة الماجستير المهني مع دعم حكومي كامل—مجانًا مع مراس",
-                eventDate: "السبت، 15 نوفمبر 2025 - الساعة 8:00 مساءً (توقيت السعودية)",
-                heroDescription: "ويبينار مجاني مقدّم من خبراء معتمدين يعرّفك خطوة بخطوة كيف تختار البرنامج الأنسب لك، كيف تسترد رسومك كاملة من صندوق هدف الحكومي مع مدخل عملي عن مجال الحوكمة وإدارة المخاطر.",
-                heroCta: "احجز مقعدك المجاني الآن",
-                mockupTitle: "ويبينار مهني احترافي",
-                mockupInfo: "تعلّم كيف تبدأ رحلتك المهنية نحو الماجستير مع دعم حكومي كامل",
-                aboutTitle: "عن مراس",
-                aboutText: "مراس جهة تدريب مهني معتمدة رسميًا في السعودية، تقدّم برامج ماجستير مهني وشهادات احترافية معترف بها دوليًا. من خلال شراكات مع جامعات وهيئات اعتماد عالمية، نساعد المهنيين على تطوير مهاراتهم ومساراتهم الوظيفية حتى بأسعار تنافسية.",
-                cred1: "معتمد رسميًا",
-                cred2: "شهادات دولية",
-                cred3: "جامعات عالمية",
-                learnTitle: "ماذا ستتعلّم؟",
-                learn1Title: "🎯 بداية رحلتك نحو الماجستير",
-                learn1Text: "كيف تبدأ طريق الشهادة الاحترافية للماجستير المهني خطوة بخطوة",
-                learn2Title: "💰 التمويل الحكومي الكامل",
-                learn2Text: "طريقة الاستفادة من دعم صندوق هدف لاسترداد الرسوم المالية بالكامل",
-                learn3Title: "✅ التحقق من الأهلية",
-                learn3Text: "كيف تتحقق إذا شهادتك مؤهلة وتمشي خطوة بخطوة بالمنصة",
-                learn4Title: "📊 الحوكمة وإدارة المخاطر",
-                learn4Text: "مدخل عملي لمجال الحوكمة وإدارة المخاطر—أكثر المجالات طلبًا في السعودية",
-                learn5Title: "🎓 الفرق بين البرامج",
-                learn5Text: "الفرق بين الماجستير الأكاديمي والمهني وأيه يليق بك من المهنيين",
-                learn6Title: "📜 شهادة حضور مجانية",
-                learn6Text: "شهادة حضور إلكترونية لكل المسجلين",
-                learnCta: "سجّل الآن وخذ أول خطوة لرفع فرصك الوظيفية",
-                speakerTitle: "عن المحاضر",
-                speakerName: "أ. عبير العجمي",
-                speakerBio: "مستشار معتمد في تطوير الأعمال وإدارة الحوكمة، بخبرة تتجاوز 15 سنة في تصميم أنظمة التطوير المؤسسي داخل الأسواق السعودي والعربي.",
-                speakerAlt: "أ. عبير العجمي, المحاضر",
-                formTitle: "نموذج التسجيل",
-                labelName: "الاسم الكامل",
-                labelEmail: "البريد الإلكتروني",
-                labelPhone: "رقم الجوال",
-                labelJob: "الوظيفة الحالية",
-                submitBtn: "احجز مقعدك الآن",
-                successTitle: "شكرًا لك!",
-                successText: "تفاصيل التسجيل ورابط الدخول وصلك على الإيميل المسجّل.",
-                faqTitle: "الأسئلة الشائعة",
-                faq1Q: "هل الويبينار مجاني؟",
-                faq1A: "نعم، التسجيل مطلوب فقط.",
-                faq2Q: "كيف أحضر؟",
-                faq2A: "يوصلك رابط على الإيميل بعد التسجيل.",
-                faq3Q: "هل في شهادة حضور؟",
-                faq3A: "نعم—شهادة إلكترونية من مراس.",
-                faq4Q: "هل أحتاج خبرة؟",
-                faq4A: "لا، الويبينار مناسب للكل من يبغى يبدأ ويطور نفسه مهنيًا.",
-                footerCta: "خطوة واحدة قادرة تغيّر مستقبلك 👇",
-                footerBtn: "سجّل الآن وابدأ رحلتك نحو شهادة دولية مع دعم حكومي كامل"
-            },
-            en: {
-                langText: "العربية",
-                metaDescription: "Join a free webinar by Meras to learn how to start your professional Master's journey with full government support, plus a practical introduction to Governance & Risk Management. Reserve your spot now!",
-                heroTitle: "Start Your Professional Master's Journey with Full Government Support—Free with Meras",
-                eventDate: "Saturday, November 15, 2025 - 8:00 PM (Saudi Arabia Time)",
-                heroDescription: "A free webinar delivered by certified experts that guides you step-by-step on how to choose the right program, how to recover your full tuition through the government's Hadaf Fund, with a practical introduction to Governance and Risk Management.",
-                heroCta: "Reserve Your Free Spot Now",
-                mockupTitle: "Professional Webinar",
-                mockupInfo: "Learn how to start your professional journey toward a Master's degree with full government support",
-                aboutTitle: "About Meras",
-                aboutText: "Meras is an officially accredited professional training organization in Saudi Arabia, offering professional Master's programs and internationally recognized professional certificates. Through partnerships with global universities and accreditation bodies, we help professionals develop their skills and career paths at competitive prices.",
-                cred1: "Officially Accredited",
-                cred2: "International Certificates",
-                cred3: "Global Universities",
-                learnTitle: "What You'll Learn",
-                learn1Title: "🎯 Starting Your Master's Journey",
-                learn1Text: "How to begin your path toward a professional Master's certificate step by step",
-                learn2Title: "💰 Full Government Funding",
-                learn2Text: "How to benefit from Hadaf Fund support to recover your tuition fees completely",
-                learn3Title: "✅ Eligibility Verification",
-                learn3Text: "How to verify if your certificate qualifies and navigate the platform step by step",
-                learn4Title: "📊 Governance & Risk Management",
-                learn4Text: "A practical introduction to Governance and Risk Management—the most in-demand fields in Saudi Arabia",
-                learn5Title: "🎓 Program Differences",
-                learn5Text: "The difference between academic and professional Master's degrees and which suits professionals best",
-                learn6Title: "📜 Free Attendance Certificate",
-                learn6Text: "Electronic attendance certificate for all registrants",
-                learnCta: "Register Now and Take the First Step to Elevate Your Career Opportunities",
-                speakerTitle: "About the Speaker",
-                speakerName: "Ms. Abeer Al-Ajmi",
-                speakerBio: "Certified consultant in business development and governance management, with over 15 years of experience in designing institutional development systems within Saudi and Arab markets.",
-                speakerAlt: "Ms. Abeer Al-Ajmi, the speaker",
-                formTitle: "Registration Form",
-                labelName: "Full Name",
-                labelEmail: "Email Address",
-                labelPhone: "Phone Number",
-                labelJob: "Current Position",
-                submitBtn: "Reserve Your Spot Now",
-                successTitle: "Thank You!",
-                successText: "Registration details and access link have been sent to your registered email.",
-                faqTitle: "Frequently Asked Questions",
-                faq1Q: "Is the webinar free?",
-                faq1A: "Yes, registration is required only.",
-                faq2Q: "How do I attend?",
-                faq2A: "A link will be sent to your email after registration.",
-                faq3Q: "Is there an attendance certificate?",
-                faq3A: "Yes—an electronic certificate from Meras.",
-                faq4Q: "Do I need experience?",
-                faq4A: "No, the webinar is suitable for anyone looking to start and develop professionally.",
-                footerCta: "One Step Can Change Your Future 👇",
-                footerBtn: "Register Now and Start Your Journey Toward an International Certificate with Full Government Support"
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- OPTIMIZATION: Cache DOM elements ---
+            // Find all necessary elements once and store them in an object.
+            // This avoids repeatedly searching the DOM in the updateContent function.
+            const dom = {
+                html: document.documentElement,
+                body: document.body,
+                metaDescription: document.getElementById('meta-description'),
+                langText: document.getElementById('lang-text'),
+                heroTitle: document.getElementById('hero-title'),
+                eventDateText: document.getElementById('event-date-text'),
+                heroDescription: document.getElementById('hero-description'),
+                heroCta: document.getElementById('hero-cta'),
+                mockupTitle: document.getElementById('mockup-title'),
+                mockupInfo: document.getElementById('mockup-info'),
+                aboutTitle: document.getElementById('about-title'),
+                aboutText: document.getElementById('about-text'),
+                cred1: document.getElementById('cred1'),
+                cred2: document.getElementById('cred2'),
+                cred3: document.getElementById('cred3'),
+                learnTitle: document.getElementById('learn-title'),
+                learn1Title: document.getElementById('learn1-title'),
+                learn1Text: document.getElementById('learn1-text'),
+                learn2Title: document.getElementById('learn2-title'),
+                learn2Text: document.getElementById('learn2-text'),
+                learn3Title: document.getElementById('learn3-title'),
+                learn3Text: document.getElementById('learn3-text'),
+                learn4Title: document.getElementById('learn4-title'),
+                learn4Text: document.getElementById('learn4-text'),
+                learn5Title: document.getElementById('learn5-title'),
+                learn5Text: document.getElementById('learn5-text'),
+                learn6Title: document.getElementById('learn6-title'),
+                learn6Text: document.getElementById('learn6-text'),
+                learnCta: document.getElementById('learn-cta'),
+                speakerTitle: document.getElementById('speaker-title'),
+                speakerName: document.getElementById('speaker-name'),
+                speakerBio: document.getElementById('speaker-bio'),
+                speakerImageTag: document.getElementById('speaker-image-tag'),
+                formTitle: document.getElementById('form-title'),
+                labelName: document.getElementById('label-name'),
+                labelEmail: document.getElementById('label-email'),
+                labelPhone: document.getElementById('label-phone'),
+                labelJob: document.getElementById('label-job'),
+                submitBtn: document.getElementById('submit-btn'),
+                successTitle: document.getElementById('success-title'),
+                successText: document.getElementById('success-text'),
+                faqTitle: document.getElementById('faq-title'),
+                faq1Q: document.getElementById('faq1-q'),
+                faq1A: document.getElementById('faq1-a'),
+                faq2Q: document.getElementById('faq2-q'),
+                faq2A: document.getElementById('faq2-a'),
+                faq3Q: document.getElementById('faq3-q'),
+                faq3A: document.getElementById('faq3-a'),
+                faq4Q: document.getElementById('faq4-q'),
+                faq4A: document.getElementById('faq4-a'),
+                footerCta: document.getElementById('footer-cta'),
+                footerBtn: document.getElementById('footer-btn'),
+                registrationForm: document.getElementById('registration-form'),
+                successMessage: document.getElementById('success-message'),
+                langToggle: document.querySelector('.lang-toggle')
+            };
+
+            const translations = {
+                ar: { langText: "English", metaDescription: "انضم إلى ويبينار مجاني من مراس لتتعلم كيف تبدأ رحلتك نحو الماجستير المهني بدعم حكومي كامل، مع مدخل عملي لمجال الحوكمة وإدارة المخاطر. احجز مقعدك الآن!", heroTitle: "ابدأ رحلتك نحو شهادة الماجستير المهني مع دعم حكومي كامل—مجانًا مع مراس", eventDate: "السبت، 15 نوفمبر 2025 - الساعة 8:00 مساءً (توقيت السعودية)", heroDescription: "ويبينار مجاني مقدّم من خبراء معتمدين يعرّفك خطوة بخطوة كيف تختار البرنامج الأنسب لك، كيف تسترد رسومك كاملة من صندوق هدف الحكومي مع مدخل عملي عن مجال الحوكمة وإدارة المخاطر.", heroCta: "احجز مقعدك المجاني الآن", mockupTitle: "ويبينار مهني احترافي", mockupInfo: "تعلّم كيف تبدأ رحلتك المهنية نحو الماجستير مع دعم حكومي كامل", aboutTitle: "عن مراس", aboutText: "مراس جهة تدريب مهني معتمدة رسميًا في السعودية، تقدّم برامج ماجستير مهني وشهادات احترافية معترف بها دوليًا. من خلال شراكات مع جامعات وهيئات اعتماد عالمية، نساعد المهنيين على تطوير مهاراتهم ومساراتهم الوظيفية حتى بأسعار تنافسية.", cred1: "معتمد رسميًا", cred2: "شهادات دولية", cred3: "جامعات عالمية", learnTitle: "ماذا ستتعلّم؟", learn1Title: "🎯 بداية رحلتك نحو الماجستير", learn1Text: "كيف تبدأ طريق الشهادة الاحترافية للماجستير المهني خطوة بخطوة", learn2Title: "💰 التمويل الحكومي الكامل", learn2Text: "طريقة الاستفادة من دعم صندوق هدف لاسترداد الرسوم المالية بالكامل", learn3Title: "✅ التحقق من الأهلية", learn3Text: "كيف تتحقق إذا شهادتك مؤهلة وتمشي خطوة بخطوة بالمنصة", learn4Title: "📊 الحوكمة وإدارة المخاطر", learn4Text: "مدخل عملي لمجال الحوكمة وإدارة المخاطر—أكثر المجالات طلبًا في السعودية", learn5Title: "🎓 الفرق بين البرامج", learn5Text: "الفرق بين الماجستير الأكاديمي والمهني وأيه يليق بك من المهنيين", learn6Title: "📜 شهادة حضور مجانية", learn6Text: "شهادة حضور إلكترونية لكل المسجلين", learnCta: "سجّل الآن وخذ أول خطوة لرفع فرصك الوظيفية", speakerTitle: "عن المحاضر", speakerName: "أ. عبير العجمي", speakerBio: "مستشار معتمد في تطوير الأعمال وإدارة الحوكمة، بخبرة تتجاوز 15 سنة في تصميم أنظمة التطوير المؤسسي داخل الأسواق السعودي والعربي.", speakerAlt: "أ. عبير العجمي, المحاضر", formTitle: "نموذج التسجيل", labelName: "الاسم الكامل", labelEmail: "البريد الإلكتروني", labelPhone: "رقم الجوال", labelJob: "الوظيفة الحالية", submitBtn: "احجز مقعدك الآن", successTitle: "شكرًا لك!", successText: "تفاصيل التسجيل ورابط الدخول وصلك على الإيميل المسجّل.", faqTitle: "الأسئلة الشائعة", faq1Q: "هل الويبينار مجاني؟", faq1A: "نعم، التسجيل مطلوب فقط.", faq2Q: "كيف أحضر؟", faq2A: "يوصلك رابط على الإيميل بعد التسجيل.", faq3Q: "هل في شهادة حضور؟", faq3A: "نعم—شهادة إلكترونية من مراس.", faq4Q: "هل أحتاج خبرة؟", faq4A: "لا، الويبينار مناسب للكل من يبغى يبدأ ويطور نفسه مهنيًا.", footerCta: "خطوة واحدة قادرة تغيّر مستقبلك 👇", footerBtn: "سجّل الآن وابدأ رحلتك نحو شهادة دولية مع دعم حكومي كامل" },
+                en: { langText: "العربية", metaDescription: "Join a free webinar by Meras to learn how to start your professional Master's journey with full government support, plus a practical introduction to Governance & Risk Management. Reserve your spot now!", heroTitle: "Start Your Professional Master's Journey with Full Government Support—Free with Meras", eventDate: "Saturday, November 15, 2025 - 8:00 PM (Saudi Arabia Time)", heroDescription: "A free webinar delivered by certified experts that guides you step-by-step on how to choose the right program, how to recover your full tuition through the government's Hadaf Fund, with a practical introduction to Governance and Risk Management.", heroCta: "Reserve Your Free Spot Now", mockupTitle: "Professional Webinar", mockupInfo: "Learn how to start your professional journey toward a Master's degree with full government support", aboutTitle: "About Meras", aboutText: "Meras is an officially accredited professional training organization in Saudi Arabia, offering professional Master's programs and internationally recognized professional certificates. Through partnerships with global universities and accreditation bodies, we help professionals develop their skills and career paths at competitive prices.", cred1: "Officially Accredited", cred2: "International Certificates", cred3: "Global Universities", learnTitle: "What You'll Learn", learn1Title: "🎯 Starting Your Master's Journey", learn1Text: "How to begin your path toward a professional Master's certificate step by step", learn2Title: "💰 Full Government Funding", learn2Text: "How to benefit from Hadaf Fund support to recover your tuition fees completely", learn3Title: "✅ Eligibility Verification", learn3Text: "How to verify if your certificate qualifies and navigate the platform step by step", learn4Title: "📊 Governance & Risk Management", learn4Text: "A practical introduction to Governance and Risk Management—the most in-demand fields in Saudi Arabia", learn5Title: "🎓 Program Differences", learn5Text: "The difference between academic and professional Master's degrees and which suits professionals best", learn6Title: "📜 Free Attendance Certificate", learn6Text: "Electronic attendance certificate for all registrants", learnCta: "Register Now and Take the First Step to Elevate Your Career Opportunities", speakerTitle: "About the Speaker", speakerName: "Ms. Abeer Al-Ajmi", speakerBio: "Certified consultant in business development and governance management, with over 15 years of experience in designing institutional development systems within Saudi and Arab markets.", speakerAlt: "Ms. Abeer Al-Ajmi, the speaker", formTitle: "Registration Form", labelName: "Full Name", labelEmail: "Email Address", labelPhone: "Phone Number", labelJob: "Current Position", submitBtn: "Reserve Your Spot Now", successTitle: "Thank You!", successText: "Registration details and access link have been sent to your registered email.", faqTitle: "Frequently Asked Questions", faq1Q: "Is the webinar free?", faq1A: "Yes, registration is required only.", faq2Q: "How do I attend?", faq2A: "A link will be sent to your email after registration.", faq3Q: "Is there an attendance certificate?", faq3A: "Yes—an electronic certificate from Meras.", faq4Q: "Do I need experience?", faq4A: "No, the webinar is suitable for anyone looking to start and develop professionally.", footerCta: "One Step Can Change Your Future 👇", footerBtn: "Register Now and Start Your Journey Toward an International Certificate with Full Government Support" }
+            };
+
+            let currentLang = 'ar';
+
+            function updateContent() {
+                const t = translations[currentLang];
+                // Update content using the cached DOM elements for better performance.
+                Object.keys(t).forEach(key => {
+                    if (dom[key]) {
+                        if (key === 'metaDescription') {
+                            dom[key].setAttribute('content', t[key]);
+                        } else if (key === 'speakerAlt') {
+                            dom.speakerImageTag.setAttribute('alt', t[key]);
+                        } else {
+                            dom[key].textContent = t[key];
+                        }
+                    }
+                });
             }
-        };
-
-        let currentLang = 'ar';
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'ar' ? 'en' : 'ar';
-            const html = document.documentElement;
-            const body = document.body;
             
-            if (currentLang === 'en') {
-                html.setAttribute('lang', 'en');
-                html.setAttribute('dir', 'ltr');
-                body.classList.add('en');
-            } else {
-                html.setAttribute('lang', 'ar');
-                html.setAttribute('dir', 'rtl');
-                body.classList.remove('en');
+            function toggleLanguage() {
+                currentLang = currentLang === 'ar' ? 'en' : 'ar';
+                
+                if (currentLang === 'en') {
+                    dom.html.lang = 'en';
+                    dom.html.dir = 'ltr';
+                    dom.body.classList.add('en');
+                } else {
+                    dom.html.lang = 'ar';
+                    dom.html.dir = 'rtl';
+                    dom.body.classList.remove('en');
+                }
+                updateContent();
             }
 
-            updateContent();
-        }
+            // --- Event Listeners ---
+            dom.langToggle.addEventListener('click', toggleLanguage);
 
-        function updateContent() {
-            const t = translations[currentLang];
-            
-            document.getElementById('meta-description').setAttribute('content', t.metaDescription);
-            document.getElementById('lang-text').textContent = t.langText;
-            document.getElementById('hero-title').textContent = t.heroTitle;
-            document.getElementById('event-date-text').textContent = t.eventDate;
-            document.getElementById('hero-description').textContent = t.heroDescription;
-            document.getElementById('hero-cta').textContent = t.heroCta;
-            document.getElementById('mockup-title').textContent = t.mockupTitle;
-            document.getElementById('mockup-info').textContent = t.mockupInfo;
-            document.getElementById('about-title').textContent = t.aboutTitle;
-            document.getElementById('about-text').textContent = t.aboutText;
-            document.getElementById('cred1').textContent = t.cred1;
-            document.getElementById('cred2').textContent = t.cred2;
-            document.getElementById('cred3').textContent = t.cred3;
-            document.getElementById('learn-title').textContent = t.learnTitle;
-            document.getElementById('learn1-title').textContent = t.learn1Title;
-            document.getElementById('learn1-text').textContent = t.learn1Text;
-            document.getElementById('learn2-title').textContent = t.learn2Title;
-            document.getElementById('learn2-text').textContent = t.learn2Text;
-            document.getElementById('learn3-title').textContent = t.learn3Title;
-            document.getElementById('learn3-text').textContent = t.learn3Text;
-            document.getElementById('learn4-title').textContent = t.learn4Title;
-            document.getElementById('learn4-text').textContent = t.learn4Text;
-            document.getElementById('learn5-title').textContent = t.learn5Title;
-            document.getElementById('learn5-text').textContent = t.learn5Text;
-            document.getElementById('learn6-title').textContent = t.learn6Title;
-            document.getElementById('learn6-text').textContent = t.learn6Text;
-            document.getElementById('learn-cta').textContent = t.learnCta;
-            document.getElementById('speaker-title').textContent = t.speakerTitle;
-            document.getElementById('speaker-name').textContent = t.speakerName;
-            document.getElementById('speaker-bio').textContent = t.speakerBio;
-            document.getElementById('speaker-image-tag').setAttribute('alt', t.speakerAlt);
-            document.getElementById('form-title').textContent = t.formTitle;
-            document.getElementById('label-name').textContent = t.labelName;
-            document.getElementById('label-email').textContent = t.labelEmail;
-            document.getElementById('label-phone').textContent = t.labelPhone;
-            document.getElementById('label-job').textContent = t.labelJob;
-            document.getElementById('submit-btn').textContent = t.submitBtn;
-            document.getElementById('success-title').textContent = t.successTitle;
-            document.getElementById('success-text').textContent = t.successText;
-            document.getElementById('faq-title').textContent = t.faqTitle;
-            document.getElementById('faq1-q').textContent = t.faq1Q;
-            document.getElementById('faq1-a').textContent = t.faq1A;
-            document.getElementById('faq2-q').textContent = t.faq2Q;
-            document.getElementById('faq2-a').textContent = t.faq2A;
-            document.getElementById('faq3-q').textContent = t.faq3Q;
-            document.getElementById('faq3-a').textContent = t.faq3A;
-            document.getElementById('faq4-q').textContent = t.faq4Q;
-            document.getElementById('faq4-a').textContent = t.faq4A;
-            document.getElementById('footer-cta').textContent = t.footerCta;
-            document.getElementById('footer-btn').textContent = t.footerBtn;
-        }
-
-        // Form Submission
-        document.getElementById('registration-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Hide form and show success message
-            document.getElementById('registration-form').style.display = 'none';
-            document.getElementById('success-message').classList.add('active');
-            
-            // Scroll to success message
-            document.getElementById('success-message').scrollIntoView({ behavior: 'smooth', block: 'center' });
-        });
-
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            dom.registrationForm.addEventListener('submit', function(e) {
                 e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+                dom.registrationForm.style.display = 'none';
+                dom.successMessage.classList.add('active');
+                dom.successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
-        });
 
-        // Scroll Reveal Animations
-        const observerOptions = {
-            threshold: 0.15,
-            rootMargin: '0px 0px -80px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                });
             });
-        }, observerOptions);
 
-        document.querySelectorAll('.scroll-reveal').forEach(el => {
-            observer.observe(el);
+            // --- BEST PRACTICE: Intersection Observer for Scroll Animations ---
+            // This is the most performant way to handle animations on scroll.
+            // It avoids layout thrashing by not needing to check element positions constantly.
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -80px 0px'
+            };
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.scroll-reveal').forEach(el => {
+                observer.observe(el);
+            });
         });
     </script>
 </body>
-
 </html>
-
