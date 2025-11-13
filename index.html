@@ -15,16 +15,14 @@
     <style>
        *{margin:0;padding:0;box-sizing:border-box}:root{--primary-navy:#1a2c5b;--secondary-green:#00a651;--accent-teal:#00a8a8;--light-bg:#f8f9fc;--white:#fff;--text-dark:#1a1a1a;--text-gray:#6b7280;--gradient-primary:linear-gradient(135deg,#1a2c5b 0%,#2d4a8e 100%);--gradient-accent:linear-gradient(135deg,#00a651 0%,#00d66c 100%);--shadow-lg:0 20px 60px rgba(0,0,0,.15);--shadow-xl:0 30px 80px rgba(0,0,0,.2)}body{font-family:'Tajawal',sans-serif;line-height:1.6;color:var(--text-dark);overflow-x:hidden;background:var(--white)}body.en{font-family:'Poppins',sans-serif}.lang-toggle{position:fixed;top:25px;left:25px;z-index:1000;background:var(--white);border-radius:50px;padding:12px 28px;box-shadow:0 8px 30px rgba(0,0,0,.12);cursor:pointer;transition:all .4s cubic-bezier(.4,0,.2,1);display:flex;align-items:center;gap:10px;font-weight:600;color:var(--primary-navy);font-size:.95rem;border:2px solid transparent}.lang-toggle:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.18);border-color:var(--secondary-green)}body.en .lang-toggle{left:auto;right:25px}.hero{background:var(--gradient-primary);min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 20px 80px}.hero::before{content:'';position:absolute;top:-50%;right:-20%;width:90%;height:160%;background:radial-gradient(circle,rgba(0,166,81,.2) 0%,transparent 60%);animation:float 25s ease-in-out infinite}.hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:70%;height:70%;background:radial-gradient(circle,rgba(0,168,168,.15) 0%,transparent 70%);animation:float 20s ease-in-out infinite reverse}@keyframes float{0%,100%{transform:translate(0,0) rotate(0)}33%{transform:translate(-40px,40px) rotate(3deg)}66%{transform:translate(40px,-30px) rotate(-3deg)}}.container{max-width:1280px;margin:0 auto;width:100%;position:relative;z-index:1}.hero-content{display:grid;grid-template-columns:1.1fr .9fr;gap:80px;align-items:center}
        
-       /* --- THIS IS THE FIX --- */
-       body.en .hero-content{grid-template-columns:0.7fr 1.3fr} /* Changed from 0.9fr 1.1fr */
+       body.en .hero-content{grid-template-columns:0.7fr 1.3fr}
 
-       .hero-text{animation:slideInRight .9s cubic-bezier(.4,0,.2,1)}body.en .hero-text{animation:slideInLeft .9s cubic-bezier(.4,0,.2,1);order:2}body.en .hero-mockup{order:1}.hero-text h1{font-size:clamp(2.2rem,5.5vw,4rem);color:var(--white);margin-bottom:25px;font-weight:900;line-height:1.15;letter-spacing:-.02em}body.en .hero-text h1{line-height:1.2}@keyframes slideInRight{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:translateX(0)}}@keyframes slideInLeft{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:translateX(0)}}.event-date{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.18);backdrop-filter:blur(20px);padding:16px 28px;border-radius:50px;color:var(--white);margin-bottom:35px;font-weight:600;animation:fadeInUp .9s cubic-bezier(.4,0,.2,1) .2s both;border:1px solid rgba(255,255,255,.2);font-size:1rem}.event-date-icon{font-size:1.3rem;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))}@keyframes fadeInUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}.hero-text p{font-size:1.25rem;color:rgba(255,255,255,.95);margin-bottom:45px;line-height:1.85;animation:fadeInUp .9s cubic-bezier(.4,0,.2,1) .4s both;font-weight:400}body.en .hero-text p{font-size:1.15rem;line-height:1.75}.cta-button{display:inline-block;background:var(--gradient-accent);color:var(--white);padding:20px 45px;border-radius:50px;font-size:1.15rem;font-weight:700;text-decoration:none;transition:all .4s cubic-bezier(.4,0,.2,1);box-shadow:0 15px 40px rgba(0,166,81,.35);animation:fadeInUp .9s cubic-bezier(.4,0,.2,1) .6s both;border:none;cursor:pointer;position:relative;overflow:hidden}.cta-button::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}.cta-button:hover::before{left:100%}.cta-button:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,166,81,.45)}.cta-button:active{transform:translateY(-2px)}.hero-mockup{position:relative;animation:fadeInUp .9s cubic-bezier(.4,0,.2,1) .8s both}.mockup-card{background:var(--white);border-radius:25px;padding:45px;box-shadow:var(--shadow-xl);transform:rotate(-3deg);transition:all .5s cubic-bezier(.4,0,.2,1);border:1px solid rgba(255,255,255,.8);position:relative}.mockup-card::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:var(--gradient-accent);border-radius:25px;z-index:-1;opacity:0;transition:opacity .5s}.mockup-card:hover{transform:rotate(0) scale(1.03) translateY(-5px)}.mockup-card:hover::before{opacity:.1}.mockup-logo{width:90px;height:90px;background:var(--gradient-primary);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:3rem;margin-bottom:25px;box-shadow:0 10px 30px rgba(26,44,91,.2)}.mockup-title{font-size:1.65rem;color:var(--primary-navy);margin-bottom:18px;font-weight:800;line-height:1.3}.mockup-info{color:var(--text-gray);line-height:1.8;font-size:1.05rem}.about-section{padding:120px 20px;background:var(--white);position:relative}.section-title{text-align:center;font-size:clamp(2.2rem,4.5vw,3.5rem);color:var(--primary-navy);margin-bottom:70px;font-weight:900;position:relative;letter-spacing:-.02em}.section-title::after{content:'';position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);width:100px;height:5px;background:var(--gradient-accent);border-radius:3px}.about-content{max-width:950px;margin:0 auto;text-align:center;font-size:1.25rem;line-height:2.1;color:var(--text-gray)}.credentials{display:flex;justify-content:center;gap:25px;margin-top:60px;flex-wrap:wrap}.credential-badge{background:linear-gradient(135deg,var(--light-bg) 0%,#e8eef9 100%);padding:18px 35px;border-radius:50px;font-weight:700;color:var(--primary-navy);box-shadow:0 8px 25px rgba(0,0,0,.06);transition:all .4s cubic-bezier(.4,0,.2,1);border:2px solid transparent;font-size:1.05rem}.credential-badge:hover{transform:translateY(-5px);box-shadow:0 12px 35px rgba(0,0,0,.12);border-color:var(--secondary-green);background:var(--white)}.learn-section{padding:120px 20px;background:linear-gradient(180deg,var(--light-bg) 0%,#e8f4ee 100%);position:relative}.learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:35px;margin-top:70px}.learn-card{background:var(--white);padding:40px;border-radius:25px;box-shadow:0 10px 35px rgba(0,0,0,.06);transition:all .5s cubic-bezier(.4,0,.2,1);border-left:5px solid var(--secondary-green);position:relative;overflow:hidden}body.en .learn-card{border-left:none;border-right:5px solid var(--secondary-green)}.learn-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:var(--gradient-accent);opacity:0;transition:opacity .5s;z-index:0}.learn-card:hover::before{opacity:.03}.learn-card:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,.15);border-left-width:8px}body.en .learn-card:hover{border-left-width:5px;border-right-width:8px}.learn-card h3{color:var(--primary-navy);font-size:1.4rem;margin-bottom:18px;font-weight:800;position:relative;z-index:1;line-height:1.4}.learn-card p{color:var(--text-gray);line-height:1.9;font-size:1.05rem;position:relative;z-index:1}.speaker-section{padding:120px 20px;background:var(--white)}.speaker-card{max-width:750px;margin:70px auto 0;background:var(--gradient-primary);border-radius:30px;padding:60px;color:var(--white);text-align:center;box-shadow:var(--shadow-xl);position:relative;overflow:hidden}.speaker-card::before{content:'';position:absolute;top:-50%;right:-50%;width:100%;height:100%;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 70%)}.speaker-image{width:170px;height:170px;border-radius:50%;background:var(--white);margin:0 auto 35px;display:flex;align-items:center;justify-content:center;font-size:5rem;color:var(--primary-navy);box-shadow:0 15px 40px rgba(0,0,0,.25);position:relative;z-index:1;border:5px solid rgba(255,255,255,.2)}.speaker-name{font-size:2.2rem;font-weight:800;margin-bottom:20px;position:relative;z-index:1}.speaker-bio{font-size:1.15rem;line-height:1.9;opacity:.96;position:relative;z-index:1}.registration-section{padding:120px 20px;background:var(--gradient-primary);position:relative;overflow:hidden}.registration-section::before{content:'';position:absolute;top:-30%;left:-20%;width:80%;height:80%;background:radial-gradient(circle,rgba(0,166,81,.15) 0%,transparent 70%)}.registration-section .section-title{color:var(--white)}.registration-section .section-title::after{background:var(--gradient-accent)}.form-container{max-width:650px;margin:70px auto 0;background:var(--white);padding:60px;border-radius:30px;box-shadow:var(--shadow-xl);position:relative;z-index:1}.form-group{margin-bottom:28px}.form-group label{display:block;margin-bottom:12px;color:var(--primary-navy);font-weight:700;font-size:1.05rem}.form-group input{width:100%;padding:18px 24px;border:2px solid #e5e7eb;border-radius:15px;font-size:1.05rem;transition:all .3s cubic-bezier(.4,0,.2,1);font-family:inherit;background:var(--light-bg)}.form-group input:focus{outline:none;border-color:var(--secondary-green);box-shadow:0 0 0 4px rgba(0,166,81,.1);background:var(--white)}.submit-button{width:100%;background:var(--gradient-accent);color:var(--white);padding:20px;border:none;border-radius:15px;font-size:1.2rem;font-weight:800;cursor:pointer;transition:all .4s cubic-bezier(.4,0,.2,1);box-shadow:0 15px 40px rgba(0,166,81,.35);position:relative;overflow:hidden}.submit-button::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transition:left .6s}.submit-button:hover::before{left:100%}.submit-button:hover{transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,166,81,.45)}.submit-button:active{transform:translateY(-1px)}.success-message{display:none;text-align:center;padding:50px}.success-message.active{display:block;animation:fadeInUp .6s cubic-bezier(.4,0,.2,1)}.success-icon{font-size:5rem;color:var(--secondary-green);margin-bottom:25px;animation:scaleIn .5s cubic-bezier(.4,0,.2,1)}@keyframes scaleIn{from{transform:scale(0)}to{transform:scale(1)}}.success-message h3{color:var(--primary-navy);font-size:2rem;margin-bottom:18px;font-weight:800}.success-message p{color:var(--text-gray);font-size:1.15rem;line-height:1.8}.faq-section{padding:120px 20px;background:var(--light-bg)}.faq-container{max-width:850px;margin:70px auto 0}.faq-item{background:var(--white);padding:35px;border-radius:20px;margin-bottom:25px;box-shadow:0 8px 25px rgba(0,0,0,.06);transition:all .4s cubic-bezier(.4,0,.2,1);border:2px solid transparent}.faq-item:hover{box-shadow:0 15px 40px rgba(0,0,0,.12);transform:translateX(5px);border-color:var(--secondary-green)}body.en .faq-item:hover{transform:translateX(-5px)}.faq-question{font-size:1.3rem;color:var(--primary-navy);font-weight:800;margin-bottom:18px;line-height:1.4}.faq-answer{color:var(--text-gray);line-height:1.9;font-size:1.05rem}.footer{background:var(--primary-navy);color:var(--white);padding:80px 20px 40px;text-align:center;position:relative;overflow:hidden}.footer::before{content:'';position:absolute;top:-50%;right:-20%;width:70%;height:150%;background:radial-gradient(circle,rgba(0,166,81,.1) 0%,transparent 70%)}.footer-logo{width:140px;margin-bottom:35px;position:relative;z-index:1}.footer-cta{font-size:1.75rem;font-weight:800;margin-bottom:35px;position:relative;z-index:1;line-height:1.4}.footer-button{display:inline-block;background:var(--gradient-accent);color:var(--white);padding:20px 55px;border-radius:50px;font-size:1.15rem;font-weight:800;text-decoration:none;transition:all .4s cubic-bezier(.4,0,.2,1);box-shadow:0 15px 40px rgba(0,166,81,.35);margin-bottom:50px;position:relative;z-index:1;overflow:hidden}.footer-button::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}.footer-button:hover::before{left:100%}.footer-button:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,166,81,.45)}.footer-text{opacity:.85;font-size:1rem;position:relative;z-index:1}.scroll-reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.4,0,.2,1)}.scroll-reveal.active{opacity:1;transform:translateY(0)}
+       .hero-text{animation:slideInRight .9s cubic-bezier(.4,0,.2,1)}body.en .hero-text{animation:slideInLeft .9s cubic-bezier(.4,0,.2,1);order:2}body.en .hero-mockup{order:1}.hero-text h1{font-size:clamp(2.2rem,5.5vw,4rem);color:var(--white);margin-bottom:25px;font-weight:900;line-height:1.15;letter-spacing:-.02em}body.en .hero-text h1{line-height:1.2}@keyframes slideInRight{from{opacity:0;transform:translateX(60px)}to{opacity:1;transform:translateX(0)}}@keyframes slideInLeft{from{opacity:0;transform:translateX(-60px)}to{opacity:1;transform:translateX(0)}}.event-date{display:inline-flex;align-items:center;gap:12px;background:rgba(255,255,255,.18);backdrop-filter:blur(20px);padding:16px 28px;border-radius:50px;color:var(--white);margin-bottom:35px;font-weight:600;animation:fadeInUp .9s cubic-bezier(.4,0,.2,1) .2s both;border:1px solid rgba(255,255,255,.2);font-size:1rem}.event-date-icon{font-size:1.3rem;filter:drop-shadow(0 2px 4px rgba(0,0,0,.1))}@keyframes fadeInUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}.hero-text p{font-size:1.25rem;color:rgba(255,255,255,.95);margin-bottom:45px;line-height:1.85;animation:fadeInUp .9s cubic-bezier(.4,0,.2,1) .4s both;font-weight:400}body.en .hero-text p{font-size:1.15rem;line-height:1.75}.cta-button{display:inline-block;background:var(--gradient-accent);color:var(--white);padding:20px 45px;border-radius:50px;font-size:1.15rem;font-weight:700;text-decoration:none;transition:all .4s cubic-bezier(.4,0,.2,1);box-shadow:0 15px 40px rgba(0,166,81,.35);animation:fadeInUp .9s cubic-bezier(.4,0,.2,1) .6s both;border:none;cursor:pointer;position:relative;overflow:hidden}.cta-button::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}.cta-button:hover::before{left:100%}.cta-button:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,166,81,.45)}.cta-button:active{transform:translateY(-2px)}.hero-mockup{position:relative;animation:fadeInUp .9s cubic-bezier(.4,0,.2,1) .8s both}.mockup-card{background:var(--white);border-radius:25px;padding:45px;box-shadow:var(--shadow-xl);transform:rotate(-3deg);transition:all .5s cubic-bezier(.4,0,.2,1);border:1px solid rgba(255,255,255,.8);position:relative}.mockup-card::before{content:'';position:absolute;top:-2px;left:-2px;right:-2px;bottom:-2px;background:var(--gradient-accent);border-radius:25px;z-index:-1;opacity:0;transition:opacity .5s}.mockup-card:hover{transform:rotate(0) scale(1.03) translateY(-5px)}.mockup-card:hover::before{opacity:.1}.mockup-logo{width:90px;height:90px;background:var(--gradient-primary);border-radius:20px;display:flex;align-items:center;justify-content:center;font-size:3rem;margin-bottom:25px;box-shadow:0 10px 30px rgba(26,44,91,.2)}.mockup-title{font-size:1.65rem;color:var(--primary-navy);margin-bottom:18px;font-weight:800;line-height:1.3}.mockup-info{color:var(--text-gray);line-height:1.8;font-size:1.05rem}.about-section{padding:120px 20px;background:var(--white);position:relative}.section-title{text-align:center;font-size:clamp(2.2rem,4.5vw,3.5rem);color:var(--primary-navy);margin-bottom:70px;font-weight:900;position:relative;letter-spacing:-.02em}.section-title::after{content:'';position:absolute;bottom:-20px;left:50%;transform:translateX(-50%);width:100px;height:5px;background:var(--gradient-accent);border-radius:3px}.about-content{max-width:950px;margin:0 auto;text-align:center;font-size:1.25rem;line-height:2.1;color:var(--text-gray)}.credentials{display:flex;justify-content:center;gap:25px;margin-top:60px;flex-wrap:wrap}.credential-badge{background:linear-gradient(135deg,var(--light-bg) 0%,#e8eef9 100%);padding:18px 35px;border-radius:50px;font-weight:700;color:var(--primary-navy);box-shadow:0 8px 25px rgba(0,0,0,.06);transition:all .4s cubic-bezier(.4,0,.2,1);border:2px solid transparent;font-size:1.05rem}.credential-badge:hover{transform:translateY(-5px);box-shadow:0 12px 35px rgba(0,0,0,.12);border-color:var(--secondary-green);background:var(--white)}.learn-section{padding:120px 20px;background:linear-gradient(180deg,var(--light-bg) 0%,#e8f4ee 100%);position:relative}.learn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:35px;margin-top:70px}.learn-card{background:var(--white);padding:40px;border-radius:25px;box-shadow:0 10px 35px rgba(0,0,0,.06);transition:all .5s cubic-bezier(.4,0,.2,1);border-left:5px solid var(--secondary-green);position:relative;overflow:hidden}body.en .learn-card{border-left:none;border-right:5px solid var(--secondary-green)}.learn-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:var(--gradient-accent);opacity:0;transition:opacity .5s;z-index:0}.learn-card:hover::before{opacity:.03}.learn-card:hover{transform:translateY(-12px);box-shadow:0 25px 50px rgba(0,0,0,.15);border-left-width:8px}body.en .learn-card:hover{border-left-width:5px;border-right-width:8px}.learn-card h3{color:var(--primary-navy);font-size:1.4rem;margin-bottom:18px;font-weight:800;position:relative;z-index:1;line-height:1.4}.learn-card p{color:var(--text-gray);line-height:1.9;font-size:1.05rem;position:relative;z-index:1}.speaker-section{padding:120px 20px;background:var(--white)}.speaker-card{max-width:750px;margin:70px auto 0;background:var(--gradient-primary);border-radius:30px;padding:60px;color:var(--white);text-align:center;box-shadow:var(--shadow-xl);position:relative;overflow:hidden}.speaker-card::before{content:'';position:absolute;top:-50%;right:-50%;width:100%;height:100%;background:radial-gradient(circle,rgba(255,255,255,.1) 0%,transparent 70%)}.speaker-image{width:170px;height:170px;border-radius:50%;background:var(--white);margin:0 auto 35px;display:flex;align-items:center;justify-content:center;font-size:5rem;color:var(--primary-navy);box-shadow:0 15px 40px rgba(0,0,0,.25);position:relative;z-index:1;border:5px solid rgba(255,255,255,.2)}.speaker-name{font-size:2.2rem;font-weight:800;margin-bottom:20px;position:relative;z-index:1}.speaker-bio{font-size:1.15rem;line-height:1.9;opacity:.96;position:relative;z-index:1}.registration-section{padding:120px 20px;background:var(--gradient-primary);position:relative;overflow:hidden}.registration-section::before{content:'';position:absolute;top:-30%;left:-20%;width:80%;height:80%;background:radial-gradient(circle,rgba(0,166,81,.15) 0%,transparent 70%)}.registration-section .section-title{color:var(--white)}.registration-section .section-title::after{background:var(--gradient-accent)}.form-container{max-width:650px;margin:70px auto 0;background:var(--white);padding:60px;border-radius:30px;box-shadow:var(--shadow-xl);position:relative;z-index:1}.form-group{margin-bottom:28px}.form-group label{display:block;margin-bottom:12px;color:var(--primary-navy);font-weight:700;font-size:1.05rem}.form-group input{width:100%;padding:18px 24px;border:2px solid #e5e7eb;border-radius:15px;font-size:1.05rem;transition:all .3s cubic-bezier(.4,0,.2,1);font-family:inherit;background:var(--light-bg)}.form-group input:focus{outline:none;border-color:var(--secondary-green);box-shadow:0 0 0 4px rgba(0,166,81,.1);background:var(--white)}.form-group input:disabled{opacity:0.6;cursor:not-allowed}.submit-button{width:100%;background:var(--gradient-accent);color:var(--white);padding:20px;border:none;border-radius:15px;font-size:1.2rem;font-weight:800;cursor:pointer;transition:all .4s cubic-bezier(.4,0,.2,1);box-shadow:0 15px 40px rgba(0,166,81,.35);position:relative;overflow:hidden}.submit-button::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transition:left .6s}.submit-button:hover::before{left:100%}.submit-button:hover:not(:disabled){transform:translateY(-3px);box-shadow:0 20px 50px rgba(0,166,81,.45)}.submit-button:active:not(:disabled){transform:translateY(-1px)}.submit-button:disabled{opacity:0.7;cursor:not-allowed}.error-message{display:none;background:#fee;border:2px solid #fcc;color:#c33;padding:15px;border-radius:10px;margin-bottom:20px;text-align:center;font-weight:600}.error-message.active{display:block;animation:fadeInUp .6s cubic-bezier(.4,0,.2,1)}.success-message{display:none;text-align:center;padding:50px}.success-message.active{display:block;animation:fadeInUp .6s cubic-bezier(.4,0,.2,1)}.success-icon{font-size:5rem;color:var(--secondary-green);margin-bottom:25px;animation:scaleIn .5s cubic-bezier(.4,0,.2,1)}@keyframes scaleIn{from{transform:scale(0)}to{transform:scale(1)}}.success-message h3{color:var(--primary-navy);font-size:2rem;margin-bottom:18px;font-weight:800}.success-message p{color:var(--text-gray);font-size:1.15rem;line-height:1.8}.faq-section{padding:120px 20px;background:var(--light-bg)}.faq-container{max-width:850px;margin:70px auto 0}.faq-item{background:var(--white);padding:35px;border-radius:20px;margin-bottom:25px;box-shadow:0 8px 25px rgba(0,0,0,.06);transition:all .4s cubic-bezier(.4,0,.2,1);border:2px solid transparent}.faq-item:hover{box-shadow:0 15px 40px rgba(0,0,0,.12);transform:translateX(5px);border-color:var(--secondary-green)}body.en .faq-item:hover{transform:translateX(-5px)}.faq-question{font-size:1.3rem;color:var(--primary-navy);font-weight:800;margin-bottom:18px;line-height:1.4}.faq-answer{color:var(--text-gray);line-height:1.9;font-size:1.05rem}.footer{background:var(--primary-navy);color:var(--white);padding:80px 20px 40px;text-align:center;position:relative;overflow:hidden}.footer::before{content:'';position:absolute;top:-50%;right:-20%;width:70%;height:150%;background:radial-gradient(circle,rgba(0,166,81,.1) 0%,transparent 70%)}.footer-logo{width:140px;margin-bottom:35px;position:relative;z-index:1}.footer-cta{font-size:1.75rem;font-weight:800;margin-bottom:35px;position:relative;z-index:1;line-height:1.4}.footer-button{display:inline-block;background:var(--gradient-accent);color:var(--white);padding:20px 55px;border-radius:50px;font-size:1.15rem;font-weight:800;text-decoration:none;transition:all .4s cubic-bezier(.4,0,.2,1);box-shadow:0 15px 40px rgba(0,166,81,.35);margin-bottom:50px;position:relative;z-index:1;overflow:hidden}.footer-button::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}.footer-button:hover::before{left:100%}.footer-button:hover{transform:translateY(-4px);box-shadow:0 20px 50px rgba(0,166,81,.45)}.footer-text{opacity:.85;font-size:1rem;position:relative;z-index:1}.scroll-reveal{opacity:0;transform:translateY(40px);transition:all .8s cubic-bezier(.4,0,.2,1)}.scroll-reveal.active{opacity:1;transform:translateY(0)}
        @media (max-width:968px){.hero-content{grid-template-columns:1fr !important;gap:50px}body.en .hero-text{order:1}body.en .hero-mockup{order:2}.hero{padding:100px 20px 60px}.learn-grid{grid-template-columns:1fr}.form-container{padding:40px 25px}.speaker-card{padding:40px 25px}.hero-text h1{font-size:clamp(1.8rem,7vw,2.5rem)}.section-title{font-size:clamp(1.8rem,6vw,2.5rem)}}
        @media (max-width:640px){.lang-toggle{top:15px;left:15px;padding:10px 20px;font-size:.9rem}body.en .lang-toggle{left:auto;right:15px}.credentials{gap:15px}.credential-badge{padding:14px 25px;font-size:.95rem}.event-date{font-size:.9rem;padding:14px 22px}.cta-button{padding:18px 35px;font-size:1.05rem}}
     </style>
 </head>
 <body>
-    <!-- The rest of your HTML remains the same -->
     <div class="lang-toggle">
         <span id="lang-icon">🌐</span>
         <span id="lang-text">English</span>
@@ -45,7 +43,7 @@
                     <div class="mockup-card">
                         <div class="mockup-logo">🎓</div>
                         <h2 class="mockup-title" id="mockup-title">ويبينار مهني احترافي</h2>
-                        <div class="mockup-info" id="mockup-info">تعلّم كيف تبدأ رحلتك المهنية نحو המاجستير مع دعم حكومي كامل</div>
+                        <div class="mockup-info" id="mockup-info">تعلّم كيف تبدأ رحلتك المهنية نحو الماجستير مع دعم حكومي كامل</div>
                     </div>
                 </div>
             </div>
@@ -115,18 +113,56 @@
             <div class="container">
                 <h2 class="section-title" id="form-title">نموذج التسجيل</h2>
                 <div class="form-container">
+                    <div class="error-message" id="error-message"></div>
                     <form id="registration-form">
                         <div class="form-group">
                             <label for="fullname" id="label-name">الاسم الكامل</label>
                             <input type="text" id="fullname" name="fullname" required>
                         </div>
                         <div class="form-group">
+                            <label for="fullname-en" id="label-name-en">الاسم الإنجليزي بالكامل</label>
+                            <input type="text" id="fullname-en" name="fullname-en" required>
+                        </div>
+                        <div class="form-group">
                             <label for="email" id="label-email">البريد الإلكتروني</label>
                             <input type="email" id="email" name="email" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone" id="label-phone">رقم الجوال</label>
+                            <label for="phone" id="label-phone">رقم الوتساب المفعل</label>
                             <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender" id="label-gender">الجنس</label>
+                            <select id="gender" name="gender" required style="width:100%;padding:18px 24px;border:2px solid #e5e7eb;border-radius:15px;font-size:1.05rem;font-family:inherit;background:var(--light-bg);">
+                                <option value="">اختر</option>
+                                <option value="ذكر">ذكر</option>
+                                <option value="أنثى">أنثى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="country" id="label-country">الدولة</label>
+                            <select id="country" name="country" required style="width:100%;padding:18px 24px;border:2px solid #e5e7eb;border-radius:15px;font-size:1.05rem;font-family:inherit;background:var(--light-bg);">
+                                <option value="">اختر الدولة</option>
+                                <option value="السعودية">السعودية</option>
+                                <option value="الإمارات">الإمارات</option>
+                                <option value="الكويت">الكويت</option>
+                                <option value="قطر">قطر</option>
+                                <option value="البحرين">البحرين</option>
+                                <option value="عمان">عمان</option>
+                                <option value="مصر">مصر</option>
+                                <option value="الأردن">الأردن</option>
+                                <option value="أخرى">أخرى</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="education" id="label-education">المؤهل العلمي</label>
+                            <select id="education" name="education" required style="width:100%;padding:18px 24px;border:2px solid #e5e7eb;border-radius:15px;font-size:1.05rem;font-family:inherit;background:var(--light-bg);">
+                                <option value="">اختر المؤهل</option>
+                                <option value="الدبلوم المهني">الدبلوم المهني</option>
+                                <option value="البكالوريوس">البكالوريوس</option>
+                                <option value="الماجستير">الماجستير</option>
+                                <option value="الدكتوراه">الدكتوراه</option>
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="job" id="label-job">الوظيفة الحالية</label>
@@ -212,8 +248,12 @@
                 speakerImageTag: document.getElementById('speaker-image-tag'),
                 formTitle: document.getElementById('form-title'),
                 labelName: document.getElementById('label-name'),
+                labelNameEn: document.getElementById('label-name-en'),
                 labelEmail: document.getElementById('label-email'),
                 labelPhone: document.getElementById('label-phone'),
+                labelGender: document.getElementById('label-gender'),
+                labelCountry: document.getElementById('label-country'),
+                labelEducation: document.getElementById('label-education'),
                 labelJob: document.getElementById('label-job'),
                 submitBtn: document.getElementById('submit-btn'),
                 successTitle: document.getElementById('success-title'),
@@ -231,13 +271,127 @@
                 footerBtn: document.getElementById('footer-btn'),
                 registrationForm: document.getElementById('registration-form'),
                 successMessage: document.getElementById('success-message'),
+                errorMessage: document.getElementById('error-message'),
                 langToggle: document.querySelector('.lang-toggle')
             };
+            
             const translations = {
-                ar: { langText: "English", metaDescription: "انضم إلى ويبينار مجاني من مراس لتتعلم كيف تبدأ رحلتك نحو الماجستير المهني بدعم حكومي كامل، مع مدخل عملي لمجال الحوكمة وإدارة المخاطر. احجز مقعدك الآن!", heroTitle: "ابدأ رحلتك نحو شهادة الماجستير المهني مع دعم حكومي كامل—مجانًا مع مراس", eventDate: "السبت، 15 نوفمبر 2025 - الساعة 8:00 مساءً (توقيت السعودية)", heroDescription: "ويبينار مجاني مقدّم من خبراء معتمدين يعرّفك خطوة بخطوة كيف تختار البرنامج الأنسب لك، كيف تسترد رسومك كاملة من صندوق هدف الحكومي مع مدخل عملي عن مجال الحوكمة وإدارة المخاطر.", heroCta: "احجز مقعدك المجاني الآن", mockupTitle: "ويبينار مهني احترافي", mockupInfo: "تعلّم كيف تبدأ رحلتك المهنية نحو الماجستير مع دعم حكومي كامل", aboutTitle: "عن مراس", aboutText: "مراس جهة تدريب مهني معتمدة رسميًا في السعودية، تقدّم برامج ماجستير مهني وشهادات احترافية معترف بها دوليًا. من خلال شراكات مع جامعات وهيئات اعتماد عالمية، نساعد المهنيين على تطوير مهاراتهم ومساراتهم الوظيفية حتى بأسعار تنافسية.", cred1: "معتمد رسميًا", cred2: "شهادات دولية", cred3: "جامعات عالمية", learnTitle: "ماذا ستتعلّم؟", learn1Title: "🎯 بداية رحلتك نحو الماجستير", learn1Text: "كيف تبدأ طريق الشهادة الاحترافية للماجستير المهني خطوة بخطوة", learn2Title: "💰 التمويل الحكومي الكامل", learn2Text: "طريقة الاستفادة من دعم صندوق هدف لاسترداد الرسوم المالية بالكامل", learn3Title: "✅ التحقق من الأهلية", learn3Text: "كيف تتحقق إذا شهادتك مؤهلة وتمشي خطوة بخطوة بالمنصة", learn4Title: "📊 الحوكمة وإدارة المخاطر", learn4Text: "مدخل عملي لمجال الحوكمة وإدارة المخاطر—أكثر المجالات طلبًا في السعودية", learn5Title: "🎓 الفرق بين البرامج", learn5Text: "الفرق بين الماجستير الأكاديمي والمهني وأيه يليق بك من المهنيين", learn6Title: "📜 شهادة حضور مجانية", learn6Text: "شهادة حضور إلكترونية لكل المسجلين", learnCta: "سجّل الآن وخذ أول خطوة لرفع فرصك الوظيفية", speakerTitle: "عن المحاضر", speakerName: "أ. عبير العجمي", speakerBio: "مستشار معتمد في تطوير الأعمال وإدارة الحوكمة، بخبرة تتجاوز 15 سنة في تصميم أنظمة التطوير المؤسسي داخل الأسواق السعودي والعربي.", speakerAlt: "أ. عبير العجمي, المحاضر", formTitle: "نموذج التسجيل", labelName: "الاسم الكامل", labelEmail: "البريد الإلكتروني", labelPhone: "رقم الجوال", labelJob: "الوظيفة الحالية", submitBtn: "احجز مقعدك الآن", successTitle: "شكرًا لك!", successText: "تفاصيل التسجيل ورابط الدخول وصلك على الإيميل المسجّل.", faqTitle: "الأسئلة الشائعة", faq1Q: "هل الويبينار مجاني؟", faq1A: "نعم، التسجيل مطلوب فقط.", faq2Q: "كيف أحضر؟", faq2A: "يوصلك رابط على الإيميل بعد التسجيل.", faq3Q: "هل في شهادة حضور؟", faq3A: "نعم—شهادة إلكترونية من مراس.", faq4Q: "هل أحتاج خبرة؟", faq4A: "لا، الويبينار مناسب للكل من يبغى يبدأ ويطور نفسه مهنيًا.", footerCta: "خطوة واحدة قادرة تغيّر مستقبلك 👇", footerBtn: "سجّل الآن وابدأ رحلتك نحو شهادة دولية مع دعم حكومي كامل" },
-                en: { langText: "العربية", metaDescription: "Join a free webinar by Meras to learn how to start your professional Master's journey with full government support, plus a practical introduction to Governance & Risk Management. Reserve your spot now!", heroTitle: "Start Your Professional Master's Journey with Full Government Support—Free with Meras", eventDate: "Saturday, November 15, 2025 - 8:00 PM (Saudi Arabia Time)", heroDescription: "A free webinar delivered by certified experts that guides you step-by-step on how to choose the right program, how to recover your full tuition through the government's Hadaf Fund, with a practical introduction to Governance and Risk Management.", heroCta: "Reserve Your Free Spot Now", mockupTitle: "Professional Webinar", mockupInfo: "Learn how to start your professional journey toward a Master's degree with full government support", aboutTitle: "About Meras", aboutText: "Meras is an officially accredited professional training organization in Saudi Arabia, offering professional Master's programs and internationally recognized professional certificates. Through partnerships with global universities and accreditation bodies, we help professionals develop their skills and career paths at competitive prices.", cred1: "Officially Accredited", cred2: "International Certificates", cred3: "Global Universities", learnTitle: "What You'll Learn", learn1Title: "🎯 Starting Your Master's Journey", learn1Text: "How to begin your path toward a professional Master's certificate step by step", learn2Title: "💰 Full Government Funding", learn2Text: "How to benefit from Hadaf Fund support to recover your tuition fees completely", learn3Title: "✅ Eligibility Verification", learn3Text: "How to verify if your certificate qualifies and navigate the platform step by step", learn4Title: "📊 Governance & Risk Management", learn4Text: "A practical introduction to Governance and Risk Management—the most in-demand fields in Saudi Arabia", learn5Title: "🎓 Program Differences", learn5Text: "The difference between academic and professional Master's degrees and which suits professionals best", learn6Title: "📜 Free Attendance Certificate", learn6Text: "Electronic attendance certificate for all registrants", learnCta: "Register Now and Take the First Step to Elevate Your Career Opportunities", speakerTitle: "About the Speaker", speakerName: "Ms. Abeer Al-Ajmi", speakerBio: "Certified consultant in business development and governance management, with over 15 years of experience in designing institutional development systems within Saudi and Arab markets.", speakerAlt: "Ms. Abeer Al-Ajmi, the speaker", formTitle: "Registration Form", labelName: "Full Name", labelEmail: "Email Address", labelPhone: "Phone Number", labelJob: "Current Position", submitBtn: "Reserve Your Spot Now", successTitle: "Thank You!", successText: "Registration details and access link have been sent to your registered email.", faqTitle: "Frequently Asked Questions", faq1Q: "Is the webinar free?", faq1A: "Yes, registration is required only.", faq2Q: "How do I attend?", faq2A: "A link will be sent to your email after registration.", faq3Q: "Is there an attendance certificate?", faq3A: "Yes—an electronic certificate from Meras.", faq4Q: "Do I need experience?", faq4A: "No, the webinar is suitable for anyone looking to start and develop professionally.", footerCta: "One Step Can Change Your Future 👇", footerBtn: "Register Now and Start Your Journey Toward an International Certificate with Full Government Support" }
+                ar: { 
+                    langText: "English", 
+                    metaDescription: "انضم إلى ويبينار مجاني من مراس لتتعلم كيف تبدأ رحلتك نحو الماجستير المهني بدعم حكومي كامل، مع مدخل عملي لمجال الحوكمة وإدارة المخاطر. احجز مقعدك الآن!", 
+                    heroTitle: "ابدأ رحلتك نحو شهادة الماجستير المهني مع دعم حكومي كامل—مجانًا مع مراس", 
+                    eventDate: "السبت، 15 نوفمبر 2025 - الساعة 8:00 مساءً (توقيت السعودية)", 
+                    heroDescription: "ويبينار مجاني مقدّم من خبراء معتمدين يعرّفك خطوة بخطوة كيف تختار البرنامج الأنسب لك، كيف تسترد رسومك كاملة من صندوق هدف الحكومي مع مدخل عملي عن مجال الحوكمة وإدارة المخاطر.", 
+                    heroCta: "احجز مقعدك المجاني الآن", 
+                    mockupTitle: "ويبينار مهني احترافي", 
+                    mockupInfo: "تعلّم كيف تبدأ رحلتك المهنية نحو الماجستير مع دعم حكومي كامل", 
+                    aboutTitle: "عن مراس", 
+                    aboutText: "مراس جهة تدريب مهني معتمدة رسميًا في السعودية، تقدّم برامج ماجستير مهني وشهادات احترافية معترف بها دوليًا. من خلال شراكات مع جامعات وهيئات اعتماد عالمية، نساعد المهنيين على تطوير مهاراتهم ومساراتهم الوظيفية حتى بأسعار تنافسية.", 
+                    cred1: "معتمد رسميًا", 
+                    cred2: "شهادات دولية", 
+                    cred3: "جامعات عالمية", 
+                    learnTitle: "ماذا ستتعلّم؟", 
+                    learn1Title: "🎯 بداية رحلتك نحو الماجستير", 
+                    learn1Text: "كيف تبدأ طريق الشهادة الاحترافية للماجستير المهني خطوة بخطوة", 
+                    learn2Title: "💰 التمويل الحكومي الكامل", 
+                    learn2Text: "طريقة الاستفادة من دعم صندوق هدف لاسترداد الرسوم المالية بالكامل", 
+                    learn3Title: "✅ التحقق من الأهلية", 
+                    learn3Text: "كيف تتحقق إذا شهادتك مؤهلة وتمشي خطوة بخطوة بالمنصة", 
+                    learn4Title: "📊 الحوكمة وإدارة المخاطر", 
+                    learn4Text: "مدخل عملي لمجال الحوكمة وإدارة المخاطر—أكثر المجالات طلبًا في السعودية", 
+                    learn5Title: "🎓 الفرق بين البرامج", 
+                    learn5Text: "الفرق بين الماجستير الأكاديمي والمهني وأيه يليق بك من المهنيين", 
+                    learn6Title: "📜 شهادة حضور مجانية", 
+                    learn6Text: "شهادة حضور إلكترونية لكل المسجلين", 
+                    learnCta: "سجّل الآن وخذ أول خطوة لرفع فرصك الوظيفية", 
+                    speakerTitle: "عن المحاضر", 
+                    speakerName: "أ. عبير العجمي", 
+                    speakerBio: "مستشار معتمد في تطوير الأعمال وإدارة الحوكمة، بخبرة تتجاوز 15 سنة في تصميم أنظمة التطوير المؤسسي داخل الأسواق السعودي والعربي.", 
+                    speakerAlt: "أ. عبير العجمي, المحاضر", 
+                    formTitle: "نموذج التسجيل", 
+                    labelName: "الاسم الكامل", 
+                    labelNameEn: "الاسم الإنجليزي بالكامل",
+                    labelEmail: "البريد الإلكتروني", 
+                    labelPhone: "رقم الوتساب المفعل", 
+                    labelGender: "الجنس",
+                    labelCountry: "الدولة",
+                    labelEducation: "المؤهل العلمي",
+                    labelJob: "الوظيفة الحالية", 
+                    submitBtn: "احجز مقعدك الآن", 
+                    successTitle: "شكرًا لك!", 
+                    successText: "تفاصيل التسجيل ورابط الدخول وصلك على الإيميل المسجّل.", 
+                    faqTitle: "الأسئلة الشائعة", 
+                    faq1Q: "هل الويبينار مجاني؟", 
+                    faq1A: "نعم، التسجيل مطلوب فقط.", 
+                    faq2Q: "كيف أحضر؟", 
+                    faq2A: "يوصلك رابط على الإيميل بعد التسجيل.", 
+                    faq3Q: "هل في شهادة حضور؟", 
+                    faq3A: "نعم—شهادة إلكترونية من مراس.", 
+                    faq4Q: "هل أحتاج خبرة؟", 
+                    faq4A: "لا، الويبينار مناسب للكل من يبغى يبدأ ويطور نفسه مهنيًا.", 
+                    footerCta: "خطوة واحدة قادرة تغيّر مستقبلك 👇", 
+                    footerBtn: "سجّل الآن وابدأ رحلتك نحو شهادة دولية مع دعم حكومي كامل" 
+                },
+                en: { 
+                    langText: "العربية", 
+                    metaDescription: "Join a free webinar by Meras to learn how to start your professional Master's journey with full government support, plus a practical introduction to Governance & Risk Management. Reserve your spot now!", 
+                    heroTitle: "Start Your Professional Master's Journey with Full Government Support—Free with Meras", 
+                    eventDate: "Saturday, November 15, 2025 - 8:00 PM (Saudi Arabia Time)", 
+                    heroDescription: "A free webinar delivered by certified experts that guides you step-by-step on how to choose the right program, how to recover your full tuition through the government's Hadaf Fund, with a practical introduction to Governance and Risk Management.", 
+                    heroCta: "Reserve Your Free Spot Now", 
+                    mockupTitle: "Professional Webinar", 
+                    mockupInfo: "Learn how to start your professional journey toward a Master's degree with full government support", 
+                    aboutTitle: "About Meras", 
+                    aboutText: "Meras is an officially accredited professional training organization in Saudi Arabia, offering professional Master's programs and internationally recognized professional certificates. Through partnerships with global universities and accreditation bodies, we help professionals develop their skills and career paths at competitive prices.", 
+                    cred1: "Officially Accredited", 
+                    cred2: "International Certificates", 
+                    cred3: "Global Universities", 
+                    learnTitle: "What You'll Learn", 
+                    learn1Title: "🎯 Starting Your Master's Journey", 
+                    learn1Text: "How to begin your path toward a professional Master's certificate step by step", 
+                    learn2Title: "💰 Full Government Funding", 
+                    learn2Text: "How to benefit from Hadaf Fund support to recover your tuition fees completely", 
+                    learn3Title: "✅ Eligibility Verification", 
+                    learn3Text: "How to verify if your certificate qualifies and navigate the platform step by step", 
+                    learn4Title: "📊 Governance & Risk Management", 
+                    learn4Text: "A practical introduction to Governance and Risk Management—the most in-demand fields in Saudi Arabia", 
+                    learn5Title: "🎓 Program Differences", 
+                    learn5Text: "The difference between academic and professional Master's degrees and which suits professionals best", 
+                    learn6Title: "📜 Free Attendance Certificate", 
+                    learn6Text: "Electronic attendance certificate for all registrants", 
+                    learnCta: "Register Now and Take the First Step to Elevate Your Career Opportunities", 
+                    speakerTitle: "About the Speaker", 
+                    speakerName: "Ms. Abeer Al-Ajmi", 
+                    speakerBio: "Certified consultant in business development and governance management, with over 15 years of experience in designing institutional development systems within Saudi and Arab markets.", 
+                    speakerAlt: "Ms. Abeer Al-Ajmi, the speaker", 
+                    formTitle: "Registration Form", 
+                    labelName: "Full Name (Arabic)", 
+                    labelNameEn: "Full Name (English)",
+                    labelEmail: "Email Address", 
+                    labelPhone: "WhatsApp Number", 
+                    labelGender: "Gender",
+                    labelCountry: "Country",
+                    labelEducation: "Education Level",
+                    labelJob: "Current Position", 
+                    submitBtn: "Reserve Your Spot Now", 
+                    successTitle: "Thank You!", 
+                    successText: "Registration details and access link have been sent to your registered email.", 
+                    faqTitle: "Frequently Asked Questions", 
+                    faq1Q: "Is the webinar free?", 
+                    faq1A: "Yes, registration is required only.", 
+                    faq2Q: "How do I attend?", 
+                    faq2A: "A link will be sent to your email after registration.", 
+                    faq3Q: "Is there an attendance certificate?", 
+                    faq3A: "Yes—an electronic certificate from Meras.", 
+                    faq4Q: "Do I need experience?", 
+                    faq4A: "No, the webinar is suitable for anyone looking to start and develop professionally.", 
+                    footerCta: "One Step Can Change Your Future 👇", 
+                    footerBtn: "Register Now and Start Your Journey Toward an International Certificate with Full Government Support" 
+                }
             };
+            
             let currentLang = 'ar';
+            
             function updateContent() {
                 const t = translations[currentLang];
                 Object.keys(t).forEach(key => {
@@ -252,6 +406,7 @@
                     }
                 });
             }
+            
             function toggleLanguage() {
                 currentLang = currentLang === 'ar' ? 'en' : 'ar';
                 if (currentLang === 'en') {
@@ -265,13 +420,100 @@
                 }
                 updateContent();
             }
+            
             dom.langToggle.addEventListener('click', toggleLanguage);
-            dom.registrationForm.addEventListener('submit', function(e) {
+            
+            // Form submission handler
+            dom.registrationForm.addEventListener('submit', async function(e) {
                 e.preventDefault();
-                dom.registrationForm.style.display = 'none';
-                dom.successMessage.classList.add('active');
-                dom.successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Get form values
+                const formData = {
+                    fullname: document.getElementById('fullname').value,
+                    fullnameEn: document.getElementById('fullname-en').value,
+                    email: document.getElementById('email').value,
+                    phone: document.getElementById('phone').value,
+                    gender: document.getElementById('gender').value,
+                    country: document.getElementById('country').value,
+                    education: document.getElementById('education').value,
+                    job: document.getElementById('job').value
+                };
+                
+                // Disable form
+                const inputs = dom.registrationForm.querySelectorAll('input, select, button');
+                inputs.forEach(input => input.disabled = true);
+                dom.submitBtn.textContent = currentLang === 'ar' ? 'جاري الإرسال...' : 'Submitting...';
+                dom.errorMessage.classList.remove('active');
+                
+                try {
+                    // Create multipart form data
+                    const boundary = '----WebKitFormBoundary' + Math.random().toString(36).substring(2);
+                    let body = '';
+                    
+                    // Add form fields matching the original request
+                    const fields = {
+                        'post_id': '13315',
+                        'form_id': 'e5ae13b',
+                        'referer_title': 'استمارة التسجيل - مراس للتدريب و التطوير المهني',
+                        'queried_id': '13315',
+                        'form_fields[name]': formData.fullname,
+                        'form_fields[field_bb15a97]': formData.fullnameEn,
+                        'form_fields[field_3958e42]': formData.phone,
+                        'form_fields[field_9506373]': formData.gender,
+                        'form_fields[field_0f86dd4]': formData.email,
+                        'form_fields[field_c1b40de]': formData.country,
+                        'form_fields[field_14d2e1b]': formData.education,
+                        'form_fields[field_90118f0]': formData.job,
+                        'action': 'elementor_pro_forms_send_form',
+                        'referrer': 'http://webinar.merass.org/'
+                    };
+                    
+                    for (const [key, value] of Object.entries(fields)) {
+                        body += `--${boundary}\r\n`;
+                        body += `Content-Disposition: form-data; name="${key}"\r\n\r\n`;
+                        body += `${value}\r\n`;
+                    }
+                    body += `--${boundary}--\r\n`;
+                    
+                    // Submit to merass.org
+                    const response = await fetch('https://merass.org/wp-admin/admin-ajax.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': `multipart/form-data; boundary=${boundary}`,
+                            'Accept': 'application/json, text/javascript, */*; q=0.01',
+                            'Origin': 'http://webinar.merass.org',
+                            'X-Requested-With': 'XMLHttpRequest'
+                        },
+                        body: body,
+                        mode: 'cors'
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success === true) {
+                        // Success
+                        dom.registrationForm.style.display = 'none';
+                        dom.successMessage.classList.add('active');
+                        dom.successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        // Error from server
+                        throw new Error(result.data?.message || 'Submission failed');
+                    }
+                    
+                } catch (error) {
+                    console.error('Submission error:', error);
+                    dom.errorMessage.textContent = currentLang === 'ar' 
+                        ? 'حدث خطأ أثناء إرسال النموذج. يرجى المحاولة مرة أخرى.' 
+                        : 'An error occurred while submitting the form. Please try again.';
+                    dom.errorMessage.classList.add('active');
+                    
+                    // Re-enable form
+                    inputs.forEach(input => input.disabled = false);
+                    dom.submitBtn.textContent = currentLang === 'ar' ? 'احجز مقعدك الآن' : 'Reserve Your Spot Now';
+                }
             });
+            
+            // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     e.preventDefault();
@@ -281,10 +523,13 @@
                     }
                 });
             });
+            
+            // Scroll reveal animation
             const observerOptions = {
                 threshold: 0.15,
                 rootMargin: '0px 0px -80px 0px'
             };
+            
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -293,6 +538,7 @@
                     }
                 });
             }, observerOptions);
+            
             document.querySelectorAll('.scroll-reveal').forEach(el => {
                 observer.observe(el);
             });
@@ -300,4 +546,3 @@
     </script>
 </body>
 </html>
-
