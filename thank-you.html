@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شكراً لتسجيلك - مراس</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}:root{--primary-navy:#1a2c5b;--secondary-green:#00a651;--accent-teal:#00a8a8;--light-bg:#f8f9fc;--white:#fff;--text-dark:#1a1a1a;--text-gray:#6b7280;--gradient-primary:linear-gradient(135deg,#1a2c5b 0%,#2d4a8e 100%);--gradient-accent:linear-gradient(135deg,#00a651 0%,#00d66c 100%)}
+        body{font-family:'Tajawal',sans-serif;background-color:var(--light-bg);color:var(--text-dark);display:flex;flex-direction:column;min-height:100vh;overflow-x:hidden}
+        body.en{font-family:'Poppins',sans-serif}
+        .lang-toggle{position:fixed;top:25px;left:25px;z-index:1000;background:var(--white);border-radius:50px;padding:10px 25px;box-shadow:0 8px 30px rgba(0,0,0,.1);cursor:pointer;font-weight:600;display:flex;align-items:center;gap:8px;border:1px solid #eee}
+        body.en .lang-toggle{left:auto;right:25px}
+        
+        .thank-you-container{flex:1;display:flex;align-items:center;justify-content:center;padding:40px 20px;background:var(--gradient-primary);position:relative}
+        .card{background:var(--white);max-width:600px;width:100%;padding:60px 40px;border-radius:30px;text-align:center;box-shadow:0 30px 60px rgba(0,0,0,0.2);animation:scaleIn 0.6s cubic-bezier(0.17, 0.67, 0.83, 0.67);position:relative;z-index:2}
+        @keyframes scaleIn{from{opacity:0;transform:scale(0.9)}to{opacity:1;transform:scale(1)}}
+        
+        .success-icon{width:100px;height:100px;background:var(--gradient-accent);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:50px;margin:0 auto 30px;box-shadow:0 15px 30px rgba(0,166,81,0.3)}
+        h1{color:var(--primary-navy);font-size:2.5rem;margin-bottom:20px;font-weight:900}
+        p{color:var(--text-gray);font-size:1.2rem;line-height:1.7;margin-bottom:40px}
+        
+        .next-steps{text-align:right;background:var(--light-bg);padding:25px;border-radius:20px;margin-bottom:40px}
+        body.en .next-steps{text-align:left}
+        .next-steps h3{color:var(--primary-navy);margin-bottom:15px;font-size:1.1rem}
+        .next-steps ul{list-style:none}
+        .next-steps li{margin-bottom:10px;display:flex;align-items:center;gap:10px;font-size:0.95rem;color:#4b5563}
+        .next-steps li::before{content:'✓';color:var(--secondary-green);font-weight:bold}
+
+        .btn-home{display:inline-block;background:var(--gradient-primary);color:var(--white);padding:18px 40px;border-radius:50px;text-decoration:none;font-weight:700;transition:all 0.3s;box-shadow:0 10px 25px rgba(26,44,91,0.2)}
+        .btn-home:hover{transform:translateY(-3px);box-shadow:0 15px 35px rgba(26,44,91,0.3)}
+        
+        .footer{padding:30px;text-align:center;color:rgba(255,255,255,0.7);font-size:0.9rem;position:absolute;bottom:0;width:100%}
+    </style>
+
+    <!-- TikTok Pixel (Copy from Landing Page) -->
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+      ttq.load('D4JEADRC77UBCCH9DIGG');
+      ttq.page();
+      // TRACKING EVENT: COMPLETE REGISTRATION
+      ttq.track('CompleteRegistration'); 
+    }(window, document, 'ttq');
+    </script>
+
+    <!-- Google Tag Manager / Global Site Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-VYL0DZ81JF"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-VYL0DZ81JF');
+      // TRACKING EVENT: CONVERSION
+      gtag('event', 'conversion', {'send_to': 'G-VYL0DZ81JF'});
+    </script>
+</head>
+<body>
+    <div class="lang-toggle" onclick="toggleLanguage()">
+        <span id="lang-icon">🌐</span>
+        <span id="lang-text">English</span>
+    </div>
+
+    <div class="thank-you-container">
+        <div class="card">
+            <div class="success-icon">✓</div>
+            <h1 id="title">تم التسجيل بنجاح!</h1>
+            <p id="desc">شكراً لاهتمامك بالويبينار المهني من مراس. تم حجز مقعدك بنجاح وسنكون سعداء برؤيتك قريباً.</p>
+            
+            <div class="next-steps">
+                <h3 id="steps-title">الخطوات التالية:</h3>
+                <ul id="steps-list">
+                    <li>تأكد من فحص بريدك الإلكتروني (بما في ذلك Junk/Spam).</li>
+                    <li>أضف موعد الويبينار إلى تقويمك الخاص.</li>
+                    <li>سيتم إرسال رابط القاعة الافتراضية قبل الموعد بـ 24 ساعة.</li>
+                </ul>
+            </div>
+
+            <a href="/" class="btn-home" id="btn-text">العودة للموقع</a>
+        </div>
+
+        <footer class="footer">
+            © 2025 Meras for Training & Professional Development.
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            ar: {
+                lang: "English",
+                title: "تم التسجيل بنجاح!",
+                desc: "شكراً لاهتمامك بالويبينار المهني من مراس. تم حجز مقعدك بنجاح وسنكون سعداء برؤيتك قريباً.",
+                stepsTitle: "الخطوات التالية:",
+                steps: [
+                    "تأكد من فحص بريدك الإلكتروني (بما في ذلك Junk/Spam).",
+                    "أضف موعد الويبينار إلى تقويمك الخاص.",
+                    "سيتم إرسال رابط القاعة الافتراضية قبل الموعد بـ 24 ساعة."
+                ],
+                btn: "العودة للموقع"
+            },
+            en: {
+                lang: "العربية",
+                title: "Registration Successful!",
+                desc: "Thank you for your interest in Meras Professional Webinar. Your seat has been reserved and we look forward to seeing you.",
+                stepsTitle: "Next Steps:",
+                steps: [
+                    "Check your email inbox (including Junk/Spam folders).",
+                    "Add the webinar date to your personal calendar.",
+                    "The virtual room link will be sent 24 hours before the event."
+                ],
+                btn: "Back to Website"
+            }
+        };
+
+        let currentLang = 'ar';
+
+        function toggleLanguage() {
+            currentLang = currentLang === 'ar' ? 'en' : 'ar';
+            const t = translations[currentLang];
+            
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            document.body.className = currentLang;
+            
+            document.getElementById('lang-text').textContent = t.lang;
+            document.getElementById('title').textContent = t.title;
+            document.getElementById('desc').textContent = t.desc;
+            document.getElementById('steps-title').textContent = t.stepsTitle;
+            document.getElementById('btn-text').textContent = t.btn;
+            
+            const list = document.getElementById('steps-list');
+            list.innerHTML = '';
+            t.steps.forEach(step => {
+                const li = document.createElement('li');
+                li.textContent = step;
+                list.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
