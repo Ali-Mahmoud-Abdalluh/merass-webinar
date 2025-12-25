@@ -532,20 +532,10 @@
                 // Show success message immediately after submission
                 // (The form will be submitted regardless of X-Frame-Options error)
                 setTimeout(() => {
-                    dom.registrationForm.style.display = 'none';
-                    dom.successMessage.classList.add('active');
-                    dom.successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    console.log('✅ Form submitted successfully');
                     
-                    // Clean up
-                    if (hiddenForm.parentNode) {
-                        hiddenForm.parentNode.removeChild(hiddenForm);
-                    }
-                    
-                    // Log success for debugging
-                    console.log('✅ Form submitted successfully with data:', {
-                        fullname, fullnameEn, email, phone, gender, country, education, job
-                    });
-                }, 800);
+                    window.location.href = 'thank-you.html'; ;
+                }, 1000);
                 
                 // Append form and submit
                 document.body.appendChild(hiddenForm);
@@ -585,6 +575,7 @@
     </script>
 </body>
 </html>
+
 
 
 
